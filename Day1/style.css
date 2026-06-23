@@ -101,7 +101,6 @@ nav a:hover, nav a.active { color: var(--primary); }
 .btn-primary { background-color: var(--primary); color: var(--white); }
 .btn-primary:hover { background-color: #1aa076; }
 
-/* HERO SECTION */
 .hero { padding-bottom: 60px; }
 .hero-top {
     display: flex;
