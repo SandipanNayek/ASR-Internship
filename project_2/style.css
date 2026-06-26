@@ -1,0 +1,906 @@
+:root {
+    --primary-green: #3B5F41;
+    --accent-gold: #A18D58;
+    --text-dark: #333333;
+    --text-light: #555555;
+    --bg-light: #F7F9F6;
+    --bg-gray: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    font-size: 110%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 5vw;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5vw;
+    position: relative; /* Added this so we can position the menu perfectly */
+}
+nav {
+    position: absolute;
+    left: 65%;
+    transform: translateX(-50%); /* This perfectly centers the whole menu block in the middle of your screen */
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.8;
+}
+
+/* Styling for your new picture */
+.logo-img {
+    width: 300px; /* Change this number to make your picture bigger or smaller */
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+/* Making the ECDS text bigger */
+.logo-text {
+    font-size: 130px; /* Increased from 75px to make the text huge */
+    font-weight: 900;
+    color: var(--primary-green);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 280px;
+
+}
+
+nav a {
+    color: var(--text-dark);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-green);
+}
+
+.nav-icons {
+    font-size: 4.2rem;
+    display: flex;
+    gap: 40px;
+    color: var(--text-dark);
+    cursor: pointer;
+    align-items: center; 
+}
+
+.nav-icons .fa-shopping-cart {
+    margin-right: 100px; 
+    cursor: pointer;
+}
+
+
+
+/* --- HERO SECTION --- */
+.hero-bg {
+    background-color: var(--bg-light);
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 6vw;
+}
+
+.img-container {
+    flex: 0.8;
+    height: 60vh;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container h1 {
+    font-size: 10rem;
+    color: var(--primary-green);
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+.text-container p {
+    font-size: 3.4rem; /* Increased from 1.8rem to make the sentence much bigger */
+    color: var(--text-light);
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.btn-group {
+    display: flex;
+    gap: 25px;
+}
+
+.btn {
+    padding: 30px 60px; /* Increased padding to make the physical buttons wider and taller */
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem; /* Increased from 1.4rem to make the text inside much larger */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: white;
+    border: 2px solid var(--primary-green);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    opacity: 0.9;
+}
+
+/* --- VIDEO BANNER --- */
+.video-banner {
+    width: 100%;
+    height: 60vh;
+    
+     background: url('img6.png') center/cover no-repeat; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.play-btn {
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.1); /* Makes the button pop out when hovered */
+    background: var(--primary-green); /* Turns green on hover */
+}
+
+/* --- SECTION PADDING --- */
+.section-padding {
+    padding: 150px 0;
+    width: 100%;
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+/* --- BRAND HIGHLIGHTS --- */
+.brand-highlights {
+    text-align: center;
+}
+
+.brand-highlights h1 {
+    font-size: 6.5rem;
+    margin-bottom: 25px;
+    color: var(--primary-green);
+}
+
+.brand-highlights h2.subtitle {
+    font-size: 2.8rem;
+    font-weight: normal;
+    color: var(--text-light);
+    max-width: 1400px;
+    margin: 0 auto 80px auto;
+    line-height: 1.6;
+}
+
+/* This makes the 3 left cards and 3 right cards bigger, and the center image area smaller */
+.brand-highlights .hl-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 2.2fr; /* Increased the side numbers to make the left and right sections much wider */
+    gap: 4vw;
+    align-items: center;
+}
+
+.hl-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+}
+
+.hl-card {
+    background: linear-gradient(135deg, #A8B89C, #718163);
+    color: white;
+    padding: 85px 60px; /* Increased the top/bottom padding to 85px to make the boxes much taller */
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hl-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* Makes the heading text much larger */
+.hl-card h4 {
+    font-size: 4rem; /* Increased from 1.8rem */
+    margin-bottom: 20px;
+}
+
+/* Makes the paragraph text much larger */
+.hl-card p {
+    font-size: 2.8rem; /* Increased from 1.4rem */
+    line-height: 1.8;
+}
+
+/* This ONLY shrinks the height of the 2nd image (Brand Highlights) */
+.brand-highlights .img-col {
+    height: 55vh; /* Reduced from 80vh */
+}
+
+.brand-highlights .img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px; 
+    border: none; 
+    padding: 12px; 
+    background: linear-gradient(135deg, #A8B89C, #718163); /* Changed to match the exact gradient of the 6 side cards */
+    box-sizing: border-box; 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3); 
+}
+
+/* --- PRODUCT SHOWCASE --- */
+.product-showcase {
+    text-align: center;
+}
+
+.product-showcase h1 {
+    font-size: 7rem;
+    margin-bottom: 15px;
+    color: var(--primary-green);
+}
+
+.product-showcase h2 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.product-showcase h3 {
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: var(--text-light);
+    margin-bottom: 60px;
+}
+
+.product-img-wrapper {
+    max-width: 1400px; /* Adjusted slightly so it doesn't stretch too wide */
+    height: auto; /* Lets the container grow naturally with your screenshot */
+    margin: 0 auto 60px auto;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 20px;
+    
+    transition: transform 0.3s ease;
+}
+
+.product-img-wrapper img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.2);
+}
+
+.product-link {
+    color: var(--text-dark);
+    font-weight: bold;
+    font-size: 2.8rem;
+    border-bottom: 4px solid var(--text-dark);
+    padding-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.product-link:hover {
+    color: var(--primary-green);
+    border-bottom-color: var(--primary-green);
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials {
+    background: linear-gradient(135deg, #9C895C, #5C704B);
+    padding: 150px 0;
+    color: white;
+    text-align: center;
+}
+
+.testimonials h1 {
+    font-size: 6.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonials h2 {
+    font-size: 3.8rem;
+    font-weight: normal;
+    margin-bottom: 80px;
+    color: white;
+}
+
+.testimonial-wrapper {
+    position: relative;
+    max-width: 60%; /* Changed to a percentage so it stretches almost all the way to the edges of the screen */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 150px 250px; /* Increased the second number to 250px to make the inside left and right massive */
+    min-height: 550px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    text-align: left;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+.test-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.test-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.test-arrow.left {
+    left: 30px;
+}
+
+.test-arrow.right {
+    right: 30px;
+}
+
+.quote-icon {
+    font-size: 130px;
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 0.8;
+}
+
+.quote-text {
+    font-size: 3.0rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.author span {
+    font-weight: normal;
+    font-size: 2.7rem;
+    opacity: 0.8;
+    display: block;
+    margin-top: 15px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.slider-dots .dot {
+    width: 40px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 100px 0 50px 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 6vw;
+    margin-bottom: 80px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links a,
+.footer-contact p {
+    color: var(--text-light);
+    font-size: 3rem;
+    line-height: 1.6;
+}
+
+.footer-contact h4,
+.footer-newsletter h4 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.footer-newsletter p {
+    font-size: 3rem;
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.newsletter-form {
+    display: flex;
+    height: 80px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0 30px;
+    font-size: 2.2rem;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.newsletter-form button {
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 0 50px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    border-top: 1px solid #eee;
+    color: var(--text-light);
+    font-size: 2.8rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 40px;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 3.8rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-green);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-building-box {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    border-radius: 16px; 
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hero-building-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30, 70, 100, 0.4); 
+    z-index: 1;
+}
+
+.relative-z {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    padding: 0 100px; 
+}
+
+.hero-building-box h1 {
+    color: white;
+    font-size: 10rem;
+    line-height: 1.2;
+    max-width: 1500px;
+}
+
+.section-padding {
+    padding: 280px 0; 
+}
+
+.info-split {
+    display: flex;
+    align-items: center;
+    gap: 8vw;
+}
+
+.info-text {
+    flex: 0.9;
+    font-size: 3.2rem;
+    line-height: 1.3;
+    color: black
+}
+
+.info-grid {
+    flex: 1.5; /* Increased from 1.3 to force the image side to take up much more horizontal space on the screen */
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    gap: 40px; /* Increased the inner space between the 3 images */
+    height: 1500px; /* MASSIVE INCREASE: Pushed height to 900px so the images stretch way up and down */
+}
+
+.grid-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Slightly stronger shadow for the larger boxes */
+    transition: transform 0.3s ease; /* Added a smooth transition for a hover effect */
+}
+
+
+.grid-item:hover {
+    transform: scale(1.02);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.grid-large {
+    grid-row: 1 / span 2; 
+    background-color: #A3A68A
+}
+.grid-large img {
+    object-fit: contain; 
+    object-position: center; 
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+.grid-item:not(.grid-large) {
+    background-color: #A3A68A; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item:not(.grid-large) img {
+    object-fit: contain; 
+    width: 90%; 
+    height: 90%;
+}
+
+.grid-label {
+    position: absolute;
+    top: 30px; 
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 4.6rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+    z-index: 2; 
+}
+
+.video-banner {
+    width: 100%;
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.play-btn {
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary-green);
+}
+
+/* --- Team Section --- */
+.team-section {
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 8.5rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.team-section  p {
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: #EAEBE9; 
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: 1800px;
+    object-fit: cover;
+    object-position: top; 
+    display: block;
+}
+
+.team-info {
+    background: linear-gradient(135deg, #A18D58, #3B5F41);
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.team-info h4 {
+    font-size: 4.2rem;
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    font-size: 3rem;
+    opacity: 0.9;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.slider-dots .dot {
+    width: 40px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background: var(--primary-green);
+}
+
+/* --- Horizontal Timeline Section --- */
+.timeline-section {
+    padding-top: 100px;
+    padding-bottom: 200px; /* Extra padding for bottom text */
+}
+
+.tl-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.tl-line {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    right: 2%;
+    height: 3px;
+    background: linear-gradient(to right, #F4A261, #9B5DE5, #00BBF9, #8AC926, #A18D58);
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.tl-point {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12%;
+}
+
+.tl-circle {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 4px solid; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+}
+
+.c-green { border-color: #A3C93B; }
+.c-gold { border-color: #E2B22D; }
+.c-blue { border-color: #3B98C9; }
+.c-orange { border-color: #E27B2D; }
+.c-purple { border-color: #9A3BC9; }
+.c-pink { border-color: #C93B8A; }
+.c-teal { border-color: #3BC9A3; }
+.c-darkgreen { border-color: #3B5F41; }
+
+.tl-content {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    text-align: center;
+    position: absolute;
+    width: 200px; /* Width of text block */
+}
+
+/* Positioning top and bottom alternating */
+.tl-top .tl-content { bottom: 100px; }
+.tl-bottom .tl-content { top: 100px; }

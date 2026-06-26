@@ -3,336 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Store - Digital Online Course</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- External CSS -->
+    <title>ECDS | Multi-Segment Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="violet-bg-wrapper">
-        <div class="main-white-card">
-            
-            <!-- HEADER -->
-            <header>
-                <div class="logo">
-                    <span class="logo-icon">B</span>
-                    Book Store
+    <!-- HEADER -->
+    <header>
+        <!-- The 'container' class ensures alignment -->
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-wrapper">
+                    <svg class="flower-icon" viewBox="0 0 24 24" fill="#A18D58" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8 2 5 5 5 9C5 12 7 14 12 14C17 14 19 12 19 9C19 5 16 2 12 2Z"/>
+                        <path d="M12 14C10 14 8 16 8 19C8 21 10 22 12 22C14 22 16 21 16 19C16 16 14 14 12 14Z"/>
+                        <path d="M4 10C2 10 1 12 1 14C1 16 2 18 4 18V10Z"/>
+                        <path d="M20 10C22 10 23 12 23 14C23 16 22 18 20 18V10Z"/>
+                    </svg>
+                    <span class="logo-text">ECDS</span>
                 </div>
-                <nav>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-globe"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg">
+        <!-- The 'container' class ensures the image aligns with the ECDS logo -->
+        <div class="container hero-container">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Woman Skincare">
+            </div>
+            <div class="text-container">
+                <h1>South Korean Innovation.<br>Rooted in Sustainability.<br>Now in India.</h1>
+                <p>From bio-sourced wellness to advanced skincare and eco-conscious materials, ECDS delivers patented solutions for a cleaner, healthier future in India.</p>
+                <div class="btn-group">
+                    <a href="product.html" class="btn btn-primary">Explore Our Brands</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND HIGHLIGHTS -->
+    <section class="section-padding brand-highlights">
+        <div class="container">
+            <h2>Brand Highlights Value</h2>
+            <p class="subtitle">Rooted in South Korean culture of precision, wellness, and respect for nature, ECDS was founded with one clear mission: to deliver carbon-conscious lifestyle solutions.</p>
+            
+            <div class="hl-grid">
+                <div class="hl-col">
+                    <div class="hl-card">
+                        <h4>Sustainability at Root</h4>
+                        <p>Every step, from raw materials to manufacturing, is chosen with environmental responsibility in mind.</p>
+                    </div>
+                    <div class="hl-card">
+                        <h4>Design Meets Function</h4>
+                        <p>We blend minimalist, elegant designs with high-level performance.</p>
+                    </div>
+                    <div class="hl-card">
+                        <h4>Wellness Beyond Self</h4>
+                        <p>Products that care for your personal health while taking care of the planet we live in.</p>
+                    </div>
+                </div>
+                
+                <div class="hl-col img-col">
+                    <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80" alt="Phone Mockup">
+                </div>
+                
+                <div class="hl-col">
+                    <div class="hl-card">
+                        <h4>Innovation with Purpose</h4>
+                        <p>Our patents and R&D are directed towards protecting the environment.</p>
+                    </div>
+                    <div class="hl-card">
+                        <h4>Global Standards, Local Relevance</h4>
+                        <p>Technologies proven in Korea adapted for the Indian market.</p>
+                    </div>
+                    <div class="hl-card">
+                        <h4>Wellness Beyond Self</h4>
+                        <p>Safe and natural products ensuring health for both your skin & the environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASES -->
+    <section class="section-padding bg-gray product-showcase">
+        <div class="container">
+            <h2>Air Filters</h2>
+            <h3>Products designed for every room.</h3>
+            <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1632928274371-878938e4d825?q=80&w=687&auto=format&fit=crop" alt="Air Filter">
+            </div>
+            <a href="product.html" class="product-link">Discover More</a>
+        </div>
+    </section>
+
+    <section class="section-padding product-showcase">
+        <div class="container">
+            <h2>TodayAday</h2>
+            <h3>Sustainable Skincare</h3>
+            <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80" alt="Skincare">
+            </div>
+            <a href="product.html" class="product-link">Discover More</a>
+        </div>
+    </section>
+
+    <section class="section-padding bg-gray product-showcase">
+        <div class="container">
+            <h2>CXP</h2>
+            <h3>Green Raw Materials</h3>
+            <div class="product-img-wrapper">
+                <img src="https://plus.unsplash.com/premium_photo-1739423890924-fbf2b96aa442?q=80&w=1074&auto=format&fit=crop" alt="CXP Plant">
+            </div>
+            <a href="product.html" class="product-link">Discover More</a>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Voices of Trust</h2>
+            <p>Real feedback from businesses who chose us</p>
+            <div class="testimonial-card">
+                <span class="quote-icon">“</span>
+                <p class="quote-text">Abodah, under the umbrella of Zennial Pro, has completely transformed our approach to learning and development. Their tailored solutions have not only improved employee engagement but also boosted productivity across our organization. Working with Abodah has been a game-changer for us.</p>
+                <div class="author">David Lee<br><span>HR Director, Tech Innovators Inc.</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
                     <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">All Courses</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
-                </nav>
-                <button class="btn btn-primary">Sign In</button>
-            </header>
-
-            <!-- HERO SECTION -->
-            <section class="hero">
-                <div class="hero-top">
-                    <div class="hero-left">
-                        <h1>
-                            Best Digital 
-                            <span class="pill-container">
-                                <span class="pill pill-purple">UI/UX Design</span>
-                                <!-- <svg class="arrow-svg" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M 5 40 Q 40 -10, 80 40 M 60 45 L 80 40 L 75 20" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> -->
-                            </span>
-                            <br>
-                            
-                            <span class="pill pill-green">App Design</span> Online Course
-                        </h1>
-                    </div>
-                    <div class="hero-right">
-                        <p>Digital online courses provide an accessible and flexible way for individuals to acquire new knowledge and skills in various fields.</p>
-                        <div class="stats-row">
-                            <div class="stat">
-                                <h3>4k</h3>
-                                <p>Worldwide<br>Student</p>
-                            </div>
-                            <div class="stat">
-                                <h3>310</h3>
-                                <p>Worldwide<br>Student</p>
-                            </div>
-                            <div class="stat">
-                                <h3>104k</h3>
-                                <p>Worldwide<br>Student</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Call: +91-11-46674655</p>
+                    <p>Email: info@ecds.co.in</p>
+                    <h4 style="margin-top:25px;">Head Office</h4>
+                    <p>Rajendra Place, New Delhi 110008</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Get industry news, expert tips, and exclusive updates straight to your inbox.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Address">
+                        <button>→</button>
                     </div>
                 </div>
-
-                <div class="hero-image-container">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80" alt="Student learning online">
-                    <div class="play-btn">
-                        <i class="fas fa-play"></i>
-                    </div>
+            </div>
+            <div class="footer-bottom">
+                <div>Copyright 2026 ECDS. All Rights Reserved.</div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
-            </section>
-
-            <section class="features">
-                <div class="feature-box">
-                    <div class="feature-icon"><i class="fas fa-laptop"></i></div>
-                    <div>
-                        <h4>Learn The Latest Skills</h4>
-                        <p>Contrary to popular belief, lorem ipsum is not simply random text. It has roots in a BC.</p>
-                    </div>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
-                    <div>
-                        <h4>Get Ready For a Career</h4>
-                        <p>Contrary to popular belief, lorem ipsum is not simply random text. It has roots in a BC.</p>
-                    </div>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-                    <div>
-                        <h4>Earn a Certificate</h4>
-                        <p>Contrary to popular belief, lorem ipsum is not simply random text. It has roots in a BC.</p>
-                    </div>
-                </div>
-            </section>
-
-            
-            <section class="why-learning">
-                <div class="why-image">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="Happy student studying">
-                </div>
-                <div class="why-text">
-                    <h2>Why Online<br>Learning Method ?</h2>
-                    <p>Online learning provides flexibility, accessibility, and personalized experiences, making education convenient for all learners. It adapts to different needs.</p>
-                    
-                    <div class="mission-vision">
-                        <div class="mv-item">
-                            <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
-                            <div>
-                                <h4>Our Mission</h4>
-                                <p>Driven by a team of dedicated educators, technologists, and innovators, we strive to create a supportive...</p>
-                            </div>
-                        </div>
-                        <div class="mv-item">
-                            <div class="mv-icon"><i class="fas fa-eye"></i></div>
-                            <div>
-                                <h4>Our Vision</h4>
-                                <p>Driven by a team of dedicated educators, technologists, and innovators, we strive to create a supportive...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            
-            <section class="courses">
-                <div class="grid-3">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=600&q=80" alt="UI/Ux Design">
-                        <p class="course-tag">UI/UX Design <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (234K Review)</span></p>
-                        <h3 class="course-title">UI/UX Design for beginners</h3>
-                        <div class="course-price">$98</div>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 22h 30min</span>
-                            <span><i class="fas fa-video"></i> 34 Courses</span>
-                            <span><i class="fas fa-download"></i> 250 Sales</span>
-                        </div>
-                    </div>
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design">
-                        <p class="course-tag">UI/UX Design <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (234K Review)</span></p>
-                        <h3 class="course-title">UI/UX Design for beginners</h3>
-                        <div class="course-price">$98</div>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 22h 30min</span>
-                            <span><i class="fas fa-video"></i> 34 Courses</span>
-                            <span><i class="fas fa-download"></i> 250 Sales</span>
-                        </div>
-                    </div>
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design">
-                        <p class="course-tag">UI/UX Design <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (234K Review)</span></p>
-                        <h3 class="course-title">UI/UX Design for Beginners</h3>
-                        <div class="course-price">$98</div>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 22h 30min</span>
-                            <span><i class="fas fa-video"></i> 34 Courses</span>
-                            <span><i class="fas fa-download"></i> 250 Sales</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            
-            <section class="commitment">
-                <div class="commit-text">
-                    <h1>Our Commitment To<br>Excellence, Learn, Grow<br>& Success</h1>
-                    <p>We are passionate about transforming lives through education. Founded with a vision to make learning accessible to all, we believe in the power of knowledge to</p>
-                    <div class="commit-grid">
-                        <span><i class="fas fa-check-circle" style="color:var(--primary);"></i> 9/10 Average Satisfaction</span>
-                        <span><i class="fas fa-check-circle" style="color:var(--primary);"></i> Friendly Environment & Expert Teacher</span>
-                        <span><i class="fas fa-check-circle" style="color:var(--primary);"></i> 96% Completion Rate</span>
-                        <span><i class="fas fa-check-circle" style="color:var(--primary);"></i> 9/10 Average Satisfaction</span>
-                    </div>
-                </div>
-                 <div class="commit-images">
-                    <div class="float-box-green">
-                        <span style="font-size:18px;">★ 4.9/5 (230K)</span><br>
-                        <span style="font-size:12px;">AVG Reviews</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Group of students" class="img-left">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&q=80" alt="Smiling student" class="img-right">
-                    <div class="float-box-purple">
-                        <span style="font-size:14px; font-weight:600;">36K+ Enrolled Students</span>
-                    </div>
-                </div>
-            </section>
-
-            
-            <section class="testimonials">
-                <h2 class="section-title">What Student's Say</h2>
-                <p class="section-subtitle">Lorem Ipsum is simply dummy text of the printing.</p>
-                <div class="grid-3">
-                    <div class="review-card">
-                        <p class="review-text">"Teachings of the great explore of truth, the master-builder of human happiness. no one rejects,dislikes, or avoids pleasure itself, pleasure itself"</p>
-                        <div class="reviewer">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Finlay Kirk">
-                            <div>
-                                <h5>Finlay Kirk</h5>
-                                <span>Web Developer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <p class="review-text">"Complete account of the system and expound the actual Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"</p>
-                        <div class="reviewer">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Dannetter P. Cervantes">
-                            <div>
-                                <h5>Dannetter P. Cervantes</h5>
-                                <span>Web Design</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <p class="review-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"</p>
-                        <div class="reviewer">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Clara R. Altman">
-                            <div>
-                                <h5>Clara R. Altman</h5>
-                                <span>UI/UX Design</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            
-            <section class="teachers">
-                <h2 class="section-title">Famous Course Teacher</h2>
-                <p class="section-subtitle">Lorem Ipsum is simply dummy text of the printing.</p>
-                <div class="grid-3">
-                    <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Tracy D. Wright">
-                        <h4>Tracy D. Wright</h4>
-                        <p class="teacher-role">Professor @George Brown College</p>
-                        <p class="teacher-desc">Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo</p>
-                        <div class="teacher-footer">
-                            <span class="subject">Engineering physics</span>
-                            <div class="socials">
-                                <i class="fab fa-instagram" style="color:#e1306c"></i>
-                                <i class="fab fa-linkedin" style="color:#0077b5"></i>
-                                <i class="fab fa-facebook" style="color:#1877f2"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Matthew E. McNatt">
-                        <h4>Paulo Maldini</h4>
-                        <p class="teacher-role">Professor @George Brown College</p>
-                        <p class="teacher-desc">Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo</p>
-                        <div class="teacher-footer">
-                            <span class="subject">Engineering physics</span>
-                            <div class="socials">
-                                <i class="fab fa-instagram" style="color:#e1306c"></i>
-                                <i class="fab fa-linkedin" style="color:#0077b5"></i>
-                                <i class="fab fa-facebook" style="color:#1877f2"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Cynthia A. Nelson">
-                        <h4>Cynthia A. Nelson</h4>
-                        <p class="teacher-role">Professor @George Brown College</p>
-                        <p class="teacher-desc">Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo</p>
-                        <div class="teacher-footer">
-                            <span class="subject">Engineering physics</span>
-                            <div class="socials">
-                                <i class="fab fa-instagram" style="color:#e1306c"></i>
-                                <i class="fab fa-linkedin" style="color:#0077b5"></i>
-                                <i class="fab fa-facebook" style="color:#1877f2"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            
-            <footer>
-                <div class="footer-grid">
-                    <div class="footer-col" style="flex: 2;">
-                        <div class="footer-logo">
-                            <span class="footer-logo-icon">B</span>
-                            Book Store
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy a type specimen book.</p>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">How to work?</a></li>
-                            <li><a href="#">Popular Course</a></li>
-                            <li><a href="#">Service</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="#">Categories</a></li>
-                            <li><a href="#">Offline Course</a></li>
-                            <li><a href="#">Video Course</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Privacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Contact Info</h4>
-                        <ul>
-                            <li style="color:#9CA3AF">+0913-705-3875</li>
-                            <li style="color:#9CA3AF">ElizabethJ@jourrapide.com</li>
-                            <li style="color:#9CA3AF">4808 Skinner Hollow Road<br>Days Creek, OR 97429</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Book Store - All Rights Reserved. Design By Sandipan</p>
-                </div>
-            </footer>
-            
-        </div> 
-    </div> 
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
