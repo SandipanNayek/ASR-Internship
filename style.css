@@ -152,10 +152,16 @@ nav ul {
 }
 
 .auth-buttons .btn {
-    font-size: 65px;       
-    padding: 14px 28px;    
+    font-size: 75px;       
+    padding: 24px 40px;    
     white-space: nowrap;
     border-radius: 50px;
+    
+    /* --- THE FIX: Forces text perfectly to the middle of the button --- */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Removes the invisible extra space fonts add to the top/bottom */
 }
 
 .hero {
