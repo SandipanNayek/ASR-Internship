@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metoxi Dashboard Fullscreen</title>
+    <!-- FIXED: Changed to styles.css to match previous steps -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-mountain" style="color: #7239ea;"></i> Metoxi
+                </div>
+            </div>
+
+            <div class="sidebar-scroll-area">
+                <ul class="nav-menu">
+                    <li class="nav-item active-parent">
+                        <i class="fa-solid fa-house"></i> Dashboard <i class="fa-solid fa-chevron-down arrow"></i>
+                    </li>
+                    <div class="submenu">
+                        <li class="nav-item active"><i class="fa-solid fa-chevron-right dot" style="margin-left: 90px;"></i> eCommerce</li>
+                        <li class="nav-item"><i class="fa-solid fa-chevron-right dot" style="margin-left: 90px;"></i> Alternate</li>
+                    </div>
+                    <li class="nav-item"><i class="fa-solid fa-border-all"></i> Widgets <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    
+                    <li class="nav-section">UI ELEMENTS</li>
+                    <li class="nav-item"><i class="fa-regular fa-credit-card"></i> Cards <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    <li class="nav-item"><i class="fa-solid fa-cart-shopping"></i> eCommerce <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    <li class="nav-item"><i class="fa-solid fa-box"></i> Components <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    <li class="nav-item"><i class="fa-solid fa-icons"></i> Icons <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    
+                    <li class="nav-section">FORMS & TABLES</li>
+                    <li class="nav-item"><i class="fa-solid fa-list"></i> Forms <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    <li class="nav-item"><i class="fa-solid fa-table"></i> Tables <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    <li class="nav-item"><i class="fa-solid fa-grip"></i> Apps <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    
+                    <li class="nav-section">PAGES</li>
+                    <li class="nav-item"><i class="fa-solid fa-lock"></i> Authentication <i class="fa-solid fa-chevron-right arrow"></i></li>
+                    <li class="nav-item"><i class="fa-regular fa-user"></i> User Profile</li>
+                    <li class="nav-item"><i class="fa-solid fa-timeline"></i> Timeline</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <i class="fa-solid fa-moon icon-action"></i>
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+                <i class="fa-solid fa-circle-info icon-action"></i>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-bars menu-toggle"></i>
+                    <div class="search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="topbar-icons">
+                    <i class="fa-solid fa-check-double"></i>
+                    <i class="fa-solid fa-border-none"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <img src="https://i.pravatar.cc/150?img=12" alt="User" class="avatar">
+                </div>
+            </header>
+            <div class="dashboard-grid">
+    
+                <div class="dash-card">
+                    <div class="card-header">
+                        <h2>$9,568 <span class="badge red">- 8.6%</span></h2>
+                        <p>Average Weekly Sales</p>
+                    </div>
+                    <div class="chart-wrapper" style="height: 700px;">
+                        <canvas id="weeklySalesChart"></canvas>
+                    </div>
+                </div>
+                <div class="dash-card span-2 stats-card">
+                    <div class="stat-box">
+                        <div class="stat-icon blue"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3>85,246</h3>
+                        <p>Orders</p>
+                    </div>
+                    <div class="stat-box border-left">
+                        <div class="stat-icon green"><i class="fa-solid fa-print"></i></div>
+                        <h3>$96,147</h3>
+                        <p>Income</p>
+                    </div>
+                    <div class="stat-box border-left">
+                        <div class="stat-icon red"><i class="fa-regular fa-bell"></i></div>
+                        <h3>846</h3>
+                        <p>Notifications</p>
+                    </div>
+                    <div class="stat-box border-left">
+                        <div class="stat-icon teal"><i class="fa-solid fa-credit-card"></i></div>
+                        <h3>$84,472</h3>
+                        <p>Payment</p>
+                    </div>
+                </div>
+
+                <div class="split-column">
+                    <div class="dash-card">
+                        <div class="card-header flex-between ">
+                            <div>
+                                <h2>97.4K</h2>
+                                <p>Total Users</p>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical menu-dot"></i>
+                        </div>
+                        <div class="chart-wrapper" style="height: 650px;">
+                            <canvas id="totalUsersChart"></canvas>
+                        </div>
+                        <p class="stat-footer align-center" ><span class="text-green">12.5%</span> from last month</p>
+                    </div>
+
+                    <div class="dash-card" style="height: 1000px;">
+                        <div class="card-header flex-between">
+                            <div>
+                                <h2>42.5K</h2>
+                                <p>Active Users</p>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical menu-dot"></i>
+                        </div>
+                        <div class="radial-progress">
+                            <div class="inner-circle">78%</div>
+                        </div>
+                        <p class="stat-footer align-center">24K users increased</p>
+                    </div>
+                </div>
+
+                <div class="dash-card span-2 row-2">
+        <div class="card-header flex-between">
+            <h2>Sales & Views</h2>
+            <i class="fa-solid fa-ellipsis-vertical menu-dot"></i>
+        </div>
+        <div class="chart-wrapper" style="height: 1050px;">
+            <canvas id="salesViewsChart"></canvas>
+        </div>
+        
+        <div class="sales-footer-stats">
+            <div class="sub-stat">
+                <div class="semi-circle blue-circle"></div>
+                <div>
+                    <p>Monthly</p>
+                    <h3>65,127</h3>
+                    <p class="small-text"><span class="text-green">16.5%</span> 55.21 USD</p>
+                </div>
+            </div>
+            <div class="sub-stat">
+                <div class="semi-circle purple-circle"></div>
+                <div>
+                    <p>Yearly</p>
+                    <h3>984,246</h3>
+                    <p class="small-text"><span class="text-green">24.9%</span> 267.35 USD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <div class="dash-card">
+                    <div class="card-header">
+                        
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 5px;">
+                            <h2 style="margin-bottom: 0;">$65,129</h2>
+                            <span class="badge green"><i class="fa-solid fa-arrow-up"></i> 8.6%</span>
+                        </div>
+                        <p style="margin-top: 45px;">Sales This Year</p>
+                    </div>
+                    
+                    
+                    <div class="progress-section" style="margin-top: 30px;">
+                        <div class="flex-between" style="margin-bottom: 10px;">
+                            <p class="stat-footer" style="margin: 0;">285 left to Goal</p>
+                            <p class="stat-footer" style="margin: 0; color: #fff;">78%</p>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </div>
+                 
+                
+                <div class="dash-card"  >
+                    <div class="card-header flex-between">
+                        <h2>Ongoing Projects</h2>
+                        <i class="fa-solid fa-ellipsis-vertical menu-dot"></i>
+                    </div>
+                    <div class="list-group" style="margin-top: 15px;">
+                        <div class="hover-list-item">
+                            <div class="item-info">
+                                <h4>Dashboard Redesign</h4>
+                                <p class="small-text">In Progress</p>
+                            </div>
+                            <span class="badge blue">45%</span>
+                        </div>
+                        <div class="hover-list-item">
+                            <div class="item-info">
+                                <h4 style="margin-top: 60px;">Database Migration</h4>
+                                <p class="small-text">Testing Stage</p>
+                            </div>
+                            <span class="badge green">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <div class="card-header flex-between">
+                        <h2>Campaigns</h2>
+                        <i class="fa-solid fa-ellipsis-vertical menu-dot"></i>
+                    </div>
+                    <div class="list-group" style="margin-top: 15px;">
+                        <div class="hover-list-item">
+                            <div class="item-info">
+                                <h4>Summer Sale 2026</h4>
+                                <p class="small-text">Active</p>
+                            </div>
+                            <h4 class="text-green" style="color: aquamarine;">+$14,200</h4>
+                        </div>
+                        <div class="hover-list-item">
+                            <div class="item-info">
+                                <h4>Email Newsletter</h4>
+                                <p class="small-text">Drafting</p>
+                            </div>
+                            <h4 style="color: var(--text-muted); font-size: 154px;">-</h4>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="dash-card">
+                    <div class="card-header flex-between">
+                        <h2>Recent Transactions</h2>
+                        <i class="fa-solid fa-ellipsis-vertical menu-dot"></i>
+                    </div>
+                    <div class="list-group" style="margin-top: 15px;">
+                        <div class="hover-list-item">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="stat-icon blue" style="width: 45px; height: 45px; margin: 0; font-size: 70px;  margin-right: 54px"><i class="fa-brands fa-paypal"></i></div>
+                                <div class="item-info">
+                                    <h4>Paypal</h4>
+                                    <p class="small-text">Today, 10:30 AM</p>
+                                </div>
+                            </div>
+                            <h4 style="color: greenyellow;">+$18,850</h4>
+                        </div>
+                        <div class="hover-list-item">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="stat-icon red" style="width: 45px; height: 45px; margin: 0; font-size: 50px; margin-right: 54px;"><i class="fa-regular fa-credit-card"></i></div>
+                                <div class="item-info">
+                                    <h4 style="margin-top: 60px;">Stripe</h4>
+                                    <p class="small-text">Yesterday</p>
+                                </div>
+                            </div>
+                            <h4 style="color: rgb(45, 206, 228);">+$15,240</h4>
+                        </div>
+                    </div>
+                </div>
+
+           </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
