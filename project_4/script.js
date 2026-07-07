@@ -54,7 +54,6 @@ if (themeToggleIcon) {
 
 Chart.defaults.color = "#a1a5b7";
 Chart.defaults.font.family = "'Inter', sans-serif";
-
 Chart.defaults.plugins.tooltip.backgroundColor = "rgba(0, 0, 0, 0.9)";
 Chart.defaults.plugins.tooltip.padding = 16;
 Chart.defaults.plugins.tooltip.titleFont = { size: 45 };
@@ -169,6 +168,99 @@ new Chart(document.getElementById("salesViewsChart"), {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const profileToggle = document.getElementById('profile-toggle');
+    const profileMenu = document.getElementById('profile-menu');
+
+    // Toggle dropdown when clicking the avatar
+    profileToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents the click from triggering the document listener below
+        profileMenu.classList.toggle('active');
+    });
+
+    // Close the dropdown if clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!profileMenu.contains(e.target) && e.target !== profileToggle) {
+            profileMenu.classList.remove('active');
+        }
+    });
+
+    const canvas = document.createElement("canvas");
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.width = "100vw";
+    canvas.style.height = "100vh";
+    canvas.style.zIndex = "-1";
+    canvas.style.pointerEvents = "none";
+    canvas.style.opacity = "0.4";
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext("2d");
+    let width, height;
+    let particles = [];
+
+    function init() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        particles = [];
+
+        const particleCount = Math.floor((width * height) / 15000);
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                radius: Math.random() * 1.5 + 0.5
+            });
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        const isLightMode = document.body.classList.contains("light-mode");
+        const drawColor = isLightMode ? "0, 0, 0" : "255, 255, 255";
+
+        particles.forEach((p) => {
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${drawColor}, 0.3)`;
+            ctx.fill();
+        });
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(${drawColor}, ${0.15 - distance / 800})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("resize", init);
+
+    init();
+    animate();
     
     
     const effectStyles = document.createElement('style');
@@ -181,7 +273,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         /* The invisible glow layer */
-        
+        .dash-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none; /* Allows mouse events to pass through */
+            background: radial-gradient(
+                600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
         
         /* Show glow on hover */
         .dash-card:hover::before { opacity: 1; }
@@ -229,4 +332,5 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.transform = ''; 
         });
     });
+
 });
