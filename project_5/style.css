@@ -197,7 +197,7 @@ header {
 }
 
 .hero p {
-    font-size: 13px;
+    font-size: 18px;
     color: #eee;
     margin-bottom: 5px;
 }
@@ -290,8 +290,8 @@ header {
 
 .about h2 {
     text-align: center;
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 18px;
     color: #222;
 }
 
@@ -302,7 +302,7 @@ header {
     background: #fff3cd;
     padding: 6px 11px;
     border-radius: 3px;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -337,7 +337,7 @@ header {
 
 .features li {
     display: flex;
-    gap: 9px;
+    gap: 13px;
     margin-bottom: 13px;
 }
 
@@ -349,27 +349,29 @@ header {
 
 .features div,
 .features strong {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.7;
 }
 
 .about-right img {
-    width: 100%;
-    height: 175px;
+    margin-left: 50px;
+    width: 80%;
+    height: 205px;
     object-fit: cover;
     border-radius: 5px;
 }
 
 .btn-learn-more {
-    width: 100%;
+    width: 60%;
     text-align: center;
     background: var(--primary-yellow);
     color: #000;
     text-decoration: none;
-    padding: 10px;
+    padding:  10px;
     border-radius: 3px;
     font-size: 11px;
     font-weight: bold;
+    margin-left: 49px;
 }
 
 .cities-section {
