@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { FaMagnifyingGlass, FaCartShopping, FaUser } from "react-icons/fa6";
 import logo from "../assets/imglogo-removebg-preview.png";
 
@@ -6,33 +7,40 @@ function Navbar() {
     <nav>
       <div className="logo">
         <img src={logo} alt="Jumpman Logo" />
-
         <span></span>
-
         <h4>JUMPMAN</h4>
       </div>
 
       <ul className="nav-links">
         <li>
-          <a href="#" className="active">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Home
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">Men</a>
+          <NavLink
+            to="/men"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Men
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">Women</a>
+          <span>Women</span>
         </li>
 
         <li>
-          <a href="#">Kids</a>
+          <span>Kids</span>
         </li>
 
         <li>
-          <a href="#">Sale</a>
+          <span>Sale</span>
         </li>
       </ul>
 

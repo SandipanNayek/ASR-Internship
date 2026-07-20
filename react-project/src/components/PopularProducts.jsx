@@ -46,14 +46,14 @@ function PopularProducts(){
     <section class="popular">
         <div class="popular-intro">
             <h5 class="section-subtitle">— Our Trending Shoes</h5>
-            <h2>Most Popular Products</h2>
-            <p>Specializes in providing high-quality, stylish products for your wardrobe.</p>
+            <h2>Most Popular <br/> Products</h2>
+            <p>Specializes in providing high-quality,<br/> stylish products for your wardrobe.</p>
             <button class="btn btn-black">Explore</button>
         </div>
         <Swiper
     modules={[Autoplay]}
     spaceBetween={30}
-    slidesPerView={3}
+    slidesPerView={4}
     loop={true}
     autoplay={{
         delay: 1000,
@@ -69,6 +69,9 @@ function PopularProducts(){
         1024: {
             slidesPerView: 3,
         },
+        1400: {
+      slidesPerView: 4,
+    },
     }}
 >
     {products.map((product, index) => (

@@ -1,0 +1,45 @@
+.brand-slider {
+    width: 95%;
+    margin: 50px auto;
+    margin-top: 100px;
+}
+
+.brand-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.brand-heading h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.brand-heading p {
+    color: #777;
+}
+
+.brand-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+.brand-card img {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.brand-card h4 {
+    font-size: 18px;
+}
