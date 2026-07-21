@@ -32,7 +32,12 @@ function Navbar() {
         </li>
 
         <li>
-          <span>Women</span>
+          <NavLink
+            to="/women"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Women
+          </NavLink>
         </li>
 
         <li>

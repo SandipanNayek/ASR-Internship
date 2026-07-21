@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
-import shoe from "../assets/jordan_shoe-removebg-preview.png";
+import shoe from "../assets/women-jorden.png"; // your women's shoe image
 
-function HeroBanner() {
+function WomenHeroBanner() {
   return (
     <section className="hero-banner">
       <div className="banner-content">
@@ -11,13 +11,13 @@ function HeroBanner() {
         </span>
 
         <h1>
-          MEN'S <br />
+          WOMEN'S <br />
           COLLECTION
         </h1>
 
         <p>
-          Discover premium sneakers designed for
-          comfort, style and performance.
+          Explore elegant sneakers crafted for comfort,
+          fashion and everyday confidence.
         </p>
 
         <h2>UP TO 40% OFF</h2>
@@ -30,10 +30,10 @@ function HeroBanner() {
       </div>
 
       <div className="banner-image">
-        <img src={shoe} alt="shoe" />
+        <img src={shoe} alt="Women's Shoe" />
       </div>
     </section>
   );
 }
 
-export default HeroBanner;
+export default WomenHeroBanner;

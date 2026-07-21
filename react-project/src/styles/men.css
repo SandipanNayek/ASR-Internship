@@ -136,10 +136,10 @@
     background:transparent;
 }
 .hero-banner {
-  width: 92%;
+  width: 96%;
   margin: 110px auto 25px;
 
-  min-height: 50px;   /* Controls the banner height */
+  min-height: 400px;   /* Controls the banner height */
   padding: 0 45px;     /* No top/bottom padding */
 
   display: flex;
@@ -152,11 +152,11 @@
   overflow: hidden;
 }
 
-.hero-content {
+.banner-content {
   flex: 1;
 }
 
-.hero-tag {
+.banner-tag {
   display: inline-block;
   background: #ff3b3b;
   color: white;
@@ -166,20 +166,20 @@
   font-weight: 600;
 }
 
-.hero-content h1 {
+.banner-content h1 {
   margin: 18px 0 12px;
   font-size: 48px;
   font-weight: 800;
 }
 
-.hero-content p {
+.banner-content p {
   max-width: 430px;
   color: #ddd;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
-.hero-btn {
+.banner-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -192,22 +192,22 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-
+  margin-top: 30px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.hero-btn:hover {
+.banner-btn:hover {
   background: #e62d2d;
 }
 
-.hero-image {
+.banner-image {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.hero-image img {
+.banner-image img {
   width: 360px;
   height: auto;
   object-fit: contain;
@@ -218,7 +218,7 @@
   transition: 0.3s;
 }
 
-.hero-image img:hover {
+.banner-image img:hover {
   transform: scale(1.05);
 }
 
@@ -229,15 +229,15 @@
     padding: 30px 20px;
   }
 
-  .hero-content h1 {
+  .banner-content h1 {
     font-size: 36px;
   }
 
-  .hero-content p {
+  .banner-content p {
     margin: 0 auto 20px;
   }
 
-  .hero-image img {
+  .banner-image img {
     width: 260px;
     margin-top: 25px;
   }
