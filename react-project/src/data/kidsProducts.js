@@ -1,0 +1,88 @@
+const kidsProducts = [
+  {
+    id: 1,
+    name: "Nike Kids Air Max",
+    brand: "Nike",
+    price: 3499,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+  },
+  {
+    id: 2,
+    name: "Adidas Kids Runner",
+    brand: "Adidas",
+    price: 2999,
+    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500",
+  },
+  {
+    id: 3,
+    name: "Puma Kids Smash",
+    brand: "Puma",
+    price: 2799,
+    image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500",
+  },
+  {
+    id: 4,
+    name: "Reebok Junior Classic",
+    brand: "Reebok",
+    price: 2599,
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
+  },
+  {
+    id: 5,
+    name: "New Balance Kids 574",
+    brand: "New Balance",
+    price: 3999,
+    image: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=500",
+  },
+  {
+    id: 6,
+    name: "Converse Kids Chuck",
+    brand: "Converse",
+    price: 3199,
+    image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=500",
+  },
+  {
+    id: 7,
+    name: "Skechers Kids Sport",
+    brand: "Skechers",
+    price: 2899,
+    image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500",
+  },
+  {
+    id: 8,
+    name: "Fila Kids Sneakers",
+    brand: "Fila",
+    price: 2499,
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
+  },
+  {
+    id: 9,
+    name: "Nike Revolution Kids",
+    brand: "Nike",
+    price: 3699,
+    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500",
+  },
+  {
+    id: 10,
+    name: "Adidas Grand Court Kids",
+    brand: "Adidas",
+    price: 3299,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+  },
+  {
+    id: 11,
+    name: "Puma Fun Racer",
+    brand: "Puma",
+    price: 2899,
+    image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500",
+  },
+  {
+    id: 12,
+    name: "Reebok Kids Lite",
+    brand: "Reebok",
+    price: 2699,
+    image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500",
+  },
+];
+
+export default kidsProducts;

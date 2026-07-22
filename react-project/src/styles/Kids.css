@@ -1,0 +1,144 @@
+
+.kids-hero-swiper {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.kids-hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background: linear-gradient(135deg, #f7f7f7, #ececec);
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 450px;
+}
+
+.kids-hero-banner .hero-content {
+  flex: 1;
+}
+
+.kids-hero-banner .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.kids-hero-banner .hero-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.kids-hero-banner .hero-content button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kids-hero-banner .hero-content button:hover {
+  background: #ff4d4d;
+}
+
+.kids-hero-banner .hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.kids-hero-banner .hero-image img {
+  width: 360px;
+  height: 320px;
+  object-fit: contain;
+}
+
+/* Swiper Navigation */
+
+.kids-hero-swiper .swiper-button-next,
+.kids-hero-swiper .swiper-button-prev {
+  color: #111;
+}
+
+.kids-hero-swiper .swiper-pagination-bullet-active {
+  background: #111;
+}
+
+/* ===========================
+   Search Bar
+=========================== */
+
+.search-bar {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+}
+
+/* ===========================
+   Filter Bar
+=========================== */
+
+.filter-bar {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-bar select {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* ===========================
+   Product Grid
+=========================== */
+
+.product-grid {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+  .kids-hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .kids-hero-banner .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .kids-hero-banner .hero-image img {
+    width: 280px;
+    margin-top: 30px;
+  }
+
+  .filter-bar {
+    justify-content: center;
+  }
+}

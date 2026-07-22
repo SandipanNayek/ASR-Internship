@@ -41,11 +41,30 @@ function Navbar() {
         </li>
 
         <li>
-          <span>Kids</span>
+          <NavLink
+            to="/kids"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Kids
+          </NavLink>
         </li>
 
         <li>
-          <span>Sale</span>
+           <NavLink
+            to="/sale"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Sale
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Cart
+          </NavLink>
         </li>
       </ul>
 

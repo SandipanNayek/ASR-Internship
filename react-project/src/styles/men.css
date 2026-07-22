@@ -135,21 +135,150 @@
     font-size:16px;
     background:transparent;
 }
-.hero-banner {
-  width: 96%;
-  margin: 110px auto 25px;
+.women-hero-banner {
+  width:100%;
+    min-height:400px;
+    padding:0 45px;
 
-  min-height: 400px;   /* Controls the banner height */
-  padding: 0 45px;     /* No top/bottom padding */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background:linear-gradient(135deg,#111,#2d2d2d);
+    color:white;
+    overflow:hidden;
+    border-radius:20px;
+}
+.women-hero-swiper .swiper-button-next,
+.women-hero-swiper .swiper-button-prev{
+    color:#fff;
+}
 
-  background: linear-gradient(135deg, #111, #2d2d2d);
-  border-radius: 20px;
+.women-hero-swiper .swiper-pagination-bullet{
+    background:#fff;
+    opacity:.6;
+}
+
+.women-hero-swiper .swiper-pagination-bullet-active{
+    opacity:1;
+    background:#ff3b3b;
+}
+.women-banner-content {
+  flex: 1;
+}
+
+.women-banner-tag {
+  display: inline-block;
+  background: #ff3b3b;
   color: white;
-  overflow: hidden;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.women-banner-content h1 {
+  margin: 18px 0 12px;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.women-banner-content p {
+  max-width: 430px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.women-banner-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.women-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+
+  background: #ff3b3b;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.women-banner-btn:hover {
+  background: #e62d2d;
+}
+
+.women-banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.women-banner-image img {
+  width: 360px;
+  height: auto;
+  object-fit: contain;
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+.women-banner-image img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .women-hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .women-banner-content h1 {
+    font-size: 36px;
+  }
+
+  .women-banner-content p {
+    margin: 0 auto 20px;
+  }
+
+  .women-banner-image img {
+    width: 260px;
+    margin-top: 25px;
+  }
+}
+.hero-swiper{
+    width:96%;
+    margin:110px auto 25px;
+    border-radius:20px;
+    overflow:hidden;
+}
+.women-hero-swiper{
+    width:96%;
+    margin:110px auto 25px;
+    border-radius:20px;
+    overflow:hidden;
+}
+.hero-banner{
+    width:100%;
+    min-height:400px;
+    padding:0 45px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:linear-gradient(135deg,#111,#2d2d2d);
+    color:white;
 }
 
 .banner-content {
@@ -299,4 +428,20 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 
+}
+
+
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev{
+    color:#fff;
+}
+
+.hero-swiper .swiper-pagination-bullet{
+    background:#fff;
+    opacity:.6;
+}
+
+.hero-swiper .swiper-pagination-bullet-active{
+    opacity:1;
+    background:#ff3b3b;
 }
