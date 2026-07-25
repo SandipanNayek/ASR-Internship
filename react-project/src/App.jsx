@@ -5,6 +5,7 @@ import Women from "./pages/Women";
 import Kids from "./pages/Kids";
 import Sale from "./pages/Sale";
 import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
 function App() {
   return (
     <Routes>
@@ -14,6 +15,7 @@ function App() {
       <Route path="/sale" element={<Sale />} />
       <Route path="/kids" element={<Kids />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/wishlist" element={<Wishlist />} />
     </Routes>
   );
 }

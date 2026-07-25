@@ -1,6 +1,7 @@
-import { FaShoppingCart } from "react-icons/fa";
-
-
+import { FaShoppingCart, FaHeart, FaRegHeart } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { toast } from "react-toastify";
 
 const flashDeals = [
   {
@@ -38,40 +39,68 @@ const flashDeals = [
 ];
 
 function FlashDeals() {
+  const { addToCart } = useCart();
+
+  const {
+    wishlist,
+    addToWishlist,
+    removeFromWishlist,
+  } = useWishlist();
+
   return (
     <section className="flash-deals">
-
       <div className="section-title">
         <h2>⚡ Flash Deals</h2>
         <p>Limited-time offers on our best-selling sneakers.</p>
       </div>
 
       <div className="flash-grid">
-        {flashDeals.map((shoe) => (
-          <div className="flash-card" key={shoe.id}>
+        {flashDeals.map((shoe) => {
+          const isWishlisted = wishlist.some(
+            (item) => item.id === shoe.id
+          );
 
-            <span className="discount-badge">
-              {shoe.discount}
-            </span>
+          return (
+            <div className="flash-card" key={shoe.id}>
+              <span className="discount-badge">
+                {shoe.discount}
+              </span>
 
-            <img src={shoe.image} alt={shoe.name} />
 
-            <h3>{shoe.name}</h3>
+              <img src={shoe.image} alt={shoe.name} />
 
-            <div className="price-box">
-              <span className="old-price">₹{shoe.oldPrice}</span>
-              <span className="new-price">₹{shoe.price}</span>
+              <h3>{shoe.name}</h3>
+
+              <div className="price-box">
+                <span className="old-price">₹{shoe.oldPrice}</span>
+                <span className="new-price">₹{shoe.price}</span>
+              </div>
+
+              <button
+                onClick={() => {
+                  addToCart(shoe);
+                  toast.success(`${shoe.name} added to cart 🛒`);
+                }}
+              >
+                <FaShoppingCart />
+                Add to Cart
+              </button>
+
+              <button
+                className="wishlist-bottom-btn"
+                onClick={() =>
+                  isWishlisted
+                    ? removeFromWishlist(shoe.id)
+                    : addToWishlist(shoe)
+                }
+              >
+                {isWishlisted ? <FaHeart /> : <FaRegHeart />}
+                {isWishlisted ? "Remove Wishlist" : "Add to Wishlist"}
+              </button>
             </div>
-
-            <button>
-              <FaShoppingCart />
-              Add to Cart
-            </button>
-
-          </div>
-        ))}
+          );
+        })}
       </div>
-
     </section>
   );
 }

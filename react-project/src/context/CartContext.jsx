@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
+import { toast } from "react-toastify";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -29,8 +29,14 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
-  };
+  const removedItem = cart.find((item) => item.id === id);
+
+  setCart(cart.filter((item) => item.id !== id));
+
+  if (removedItem) {
+    toast.error(`${removedItem.name} removed from cart ❌`);
+  }
+};
 
   const increase = (id) => {
     setCart(

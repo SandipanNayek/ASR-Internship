@@ -14,13 +14,13 @@ const brands = [
   {
     id: 3,
     name: "Puma",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Puma_Logo.svg",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa5g8SUPam-K4-dmbzXwlKNXhWSZdwUw6I6uO8d28QNg&s=10",
     discount: "Up to 40% OFF",
   },
   {
     id: 4,
     name: "New Balance",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/ea/New_Balance_logo.svg",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk7t_067-B6P1YFrRFvLC4IhhYE7UQBH7eKB32UPAEyQ&s=10",
     discount: "Up to 35% OFF",
   },
 ];

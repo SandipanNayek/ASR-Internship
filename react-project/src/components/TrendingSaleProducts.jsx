@@ -1,4 +1,7 @@
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaHeart, FaRegHeart } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { toast } from "react-toastify";
 
 const products = [
   {
@@ -58,47 +61,74 @@ const products = [
 ];
 
 function TrendingSaleProducts() {
+  const { addToCart } = useCart();
+
+  const {
+    wishlist,
+    addToWishlist,
+    removeFromWishlist,
+  } = useWishlist();
+
   return (
     <section className="trending-sale">
-
       <div className="section-title">
         <h2>🔥 Trending Sale Products</h2>
         <p>Grab these best-selling sneakers before the sale ends.</p>
       </div>
 
       <div className="trending-grid">
-        {products.map((product) => (
-          <div className="trending-card" key={product.id}>
+        {products.map((product) => {
+          const isWishlisted = wishlist.some(
+            (item) => item.id === product.id
+          );
 
-            <span className="sale-badge">
-              {product.discount}
-            </span>
-
-            <img src={product.image} alt={product.name} />
-
-            <h3>{product.name}</h3>
-
-            <p className="brand">{product.brand}</p>
-
-            <div className="price-row">
-              <span className="old-price">
-                ₹{product.oldPrice}
+          return (
+            <div className="trending-card" key={product.id}>
+              <span className="sale-badge">
+                {product.discount}
               </span>
 
-              <span className="new-price">
-                ₹{product.price}
-              </span>
+              <img src={product.image} alt={product.name} />
+
+              <h3>{product.name}</h3>
+
+              <p className="brand">{product.brand}</p>
+
+              <div className="price-row">
+                <span className="old-price">
+                  ₹{product.oldPrice}
+                </span>
+
+                <span className="new-price">
+                  ₹{product.price}
+                </span>
+              </div>
+
+              <button
+                className="cart-btn"
+                onClick={() => {
+                  addToCart(product);
+                  toast.success(`${product.name} added to cart 🛒`);
+                }}
+              >
+                <FaCartPlus />
+                Add to Cart
+              </button>
+              <button
+                className="wishlist-bottom-btn"
+                onClick={() =>
+                  isWishlisted
+                    ? removeFromWishlist(product.id)
+                    : addToWishlist(product)
+                }
+              >
+                {isWishlisted ? <FaHeart /> : <FaRegHeart />}
+                {isWishlisted ? "Remove Wishlist" : "Add to Wishlist"}
+              </button>
             </div>
-
-            <button>
-              <FaCartPlus />
-              Add to Cart
-            </button>
-
-          </div>
-        ))}
+          );
+        })}
       </div>
-
     </section>
   );
 }

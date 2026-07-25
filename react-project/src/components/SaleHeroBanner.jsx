@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -38,11 +38,11 @@ function SaleHeroBanner() {
   return (
     <div className="sale-hero-swiper">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination]}
         slidesPerView={1}
         loop={true}
         speed={900}
-        navigation
+       
         pagination={{ clickable: true }}
         autoplay={{
           delay: 2000,

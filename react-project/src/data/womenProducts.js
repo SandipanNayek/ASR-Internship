@@ -36,7 +36,7 @@ const womenProducts = [
     image: "https://assets.myntassets.com/assets/images/34198962/2025/6/23/80938f25-47a4-4735-be7e-87616445330f1750693245471-Nike-Pegasus-41-Womens-Road-Running-Shoes-2251750693244861-2.jpg",
   },
 
-  // Adidas
+  
   {
     id: 6,
     brand: "Adidas",

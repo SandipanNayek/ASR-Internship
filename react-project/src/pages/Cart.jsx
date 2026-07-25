@@ -1,3 +1,4 @@
+
 import { useCart } from "../context/CartContext";
 
 function Cart() {
@@ -13,59 +14,102 @@ function Cart() {
     0
   );
 
-  return (
-    <div style={{ width: "90%", margin: "40px auto" }}>
-      <h1>Shopping Cart</h1>
+  if (cart.length === 0) {
+    return (
+      <div className="empty-cart">
+        <h2>Your Cart is Empty</h2>
+        <p>Add your favourite shoes to start shopping.</p>
+        <button
+          className="shop-btn"
+          onClick={() => (window.location.href = "/")}
+        >
+          Continue Shopping
+        </button>
+      </div>
+    );
+  }
 
-      {cart.length === 0 ? (
-        <h2>Your cart is empty.</h2>
-      ) : (
-        <>
+  return (
+    <div className="cart-page">
+      <h1 className="cart-title">Shopping Cart</h1>
+
+      <div className="cart-container">
+        {/* Left Side */}
+        <div className="cart-items">
           {cart.map((item) => (
-            <div
-              key={item.id}
-              style={{
-                display: "flex",
-                gap: "20px",
-                margin: "20px 0",
-                alignItems: "center",
-              }}
-            >
+            <div className="cart-card" key={item.id}>
               <img
                 src={item.image}
-                width="120"
                 alt={item.title}
               />
 
-              <div style={{ flex: 1 }}>
+              <div className="cart-info">
                 <h3>{item.title}</h3>
 
-                <p>₹ {item.price}</p>
+                {item.brand && (
+                  <p className="cart-brand">{item.brand}</p>
+                )}
 
-                <button onClick={() => decrease(item.id)}>
-                  -
-                </button>
+                <p className="cart-price">
+                  ₹ {item.price}
+                </p>
 
-                <span style={{ margin: "0 10px" }}>
-                  {item.quantity}
-                </span>
+                <div className="cart-actions">
+                  <button
+                    className="qty-btn"
+                    onClick={() => decrease(item.id)}
+                  >
+                    −
+                  </button>
 
-                <button onClick={() => increase(item.id)}>
-                  +
-                </button>
+                  <span className="qty">
+                    {item.quantity}
+                  </span>
+
+                  <button
+                    className="qty-btn"
+                    onClick={() => increase(item.id)}
+                  >
+                    +
+                  </button>
+
+                  <button
+                    className="remove-btn"
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
-
-              <button onClick={() => removeFromCart(item.id)}>
-                Remove
-              </button>
             </div>
           ))}
+        </div>
 
-          <h2>Total : ₹ {total}</h2>
-        </>
-      )}
+        {/* Right Side */}
+        <div className="order-summary">
+          <h2>Order Summary</h2>
+
+          <div className="summary-row">
+            <span>Items</span>
+            <span>{cart.length}</span>
+          </div>
+
+          <div className="summary-row">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+
+          <div className="summary-row summary-total">
+            <span>Total</span>
+            <span>₹ {total}</span>
+          </div>
+
+          <button className="checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
-
 export default Cart;

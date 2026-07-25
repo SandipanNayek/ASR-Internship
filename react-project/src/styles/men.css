@@ -136,18 +136,15 @@
     background:transparent;
 }
 .women-hero-banner {
-  width:100%;
-    min-height:400px;
-    padding:0 45px;
-
-    display:flex;
-    justify-content:space-between;
+  display:flex;
     align-items:center;
-
-    background:linear-gradient(135deg,#111,#2d2d2d);
-    color:white;
+    justify-content:space-between;
+    min-height:480px;
+    background:#111;
+    color:#fff;
     overflow:hidden;
-    border-radius:20px;
+    position:relative;
+    padding:0 80px;
 }
 .women-hero-swiper .swiper-button-next,
 .women-hero-swiper .swiper-button-prev{
@@ -164,7 +161,8 @@
     background:#ff3b3b;
 }
 .women-banner-content {
-  flex: 1;
+  width:45%;
+    z-index:2;
 }
 
 .women-banner-tag {
@@ -218,22 +216,43 @@
   background: #e62d2d;
 }
 
-.women-banner-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+.women-banner-image-box{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.women-banner-image img {
-  width: 360px;
-  height: auto;
-  object-fit: contain;
-  transform: rotate(0deg);
-  transition: 0.3s;
+.women-banner-image{
+   width:55%;
+    height:100%;
+    position:relative;
 }
 
-.women-banner-image img:hover {
-  transform: scale(1.05);
+.women-banner-image img{
+  position:absolute;
+    right:100px;
+    top:50%;
+    transform:translateY(-50%);
+    width:450px;
+    object-fit:contain;
+    transition: transform 0.4s ease-in-out;
+}
+
+.women-banner-image::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:#ff5a00;
+    filter:blur(120px);
+    right:120px;
+    top:50%;
+    transform:translateY(-50%);
+}
+.women-banner-image img:hover{
+  transform: translateY(-50%) scale(1.08);
 }
 
 @media (max-width: 900px) {
@@ -269,20 +288,20 @@
     overflow:hidden;
 }
 .hero-banner{
-    width:100%;
-    min-height:400px;
-    padding:0 45px;
-
     display:flex;
-    justify-content:space-between;
     align-items:center;
-
-    background:linear-gradient(135deg,#111,#2d2d2d);
-    color:white;
+    justify-content:space-between;
+    min-height:480px;
+    background:#111;
+    color:#fff;
+    overflow:hidden;
+    position:relative;
+    padding:0 80px;
 }
 
 .banner-content {
-  flex: 1;
+  width:45%;
+    z-index:2;
 }
 
 .banner-tag {
@@ -325,31 +344,90 @@
   cursor: pointer;
   transition: 0.3s;
 }
+.nav-icons{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
 
+.icon-wrapper{
+    position:relative;
+    color:#111;
+    font-size:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+.icon-wrapper svg{
+    transition:.3s;
+}
+
+.icon-wrapper:hover svg{
+    color:#e63946;
+}
+
+.icon-count{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#e63946;
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 .banner-btn:hover {
   background: #e62d2d;
 }
 
-.banner-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+.banner-image-box{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.banner-image img {
-  width: 360px;
-  height: auto;
-  object-fit: contain;
-
-  /* Straight image */
-  transform: rotate(0deg);
-
-  transition: 0.3s;
+.banner-image{
+    width:55%;
+    height:100%;
+    position:relative;
 }
 
-.banner-image img:hover {
-  transform: scale(1.05);
+.banner-image img{
+      position:absolute;
+    right:100px;
+    top:50%;
+    transform:translateY(-50%);
+    width:450px;
+    object-fit:contain;
+    transition: transform 0.4s ease;
 }
+.banner-image img:hover{
+  transform: translateY(-50%) scale(1.08);
+}
+.banner-image::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:#ff5a00;
+    filter:blur(120px);
+    right:120px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* .banner-image img:hover{
+    transform:scale(1.08);
+} */
 
 @media (max-width: 900px) {
   .hero-banner {

@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import {  Pagination, Autoplay } from "swiper/modules";
 
 import kids1 from "../assets/KidsBanner-removebg-preview.png";
 import kids2 from "../assets/KidsBanner4-removebg-preview.png";
@@ -35,11 +35,11 @@ function KidsHeroBanner() {
   return (
     <div className="hero-swiper">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[ Pagination, Autoplay]}
         slidesPerView={1}
         loop={true}
         speed={900}
-        navigation
+        
         pagination={{ clickable: true }}
         autoplay={{
           delay: 2500,
@@ -63,9 +63,10 @@ function KidsHeroBanner() {
                   <FaArrowRight />
                 </button>
               </div>
-
+               
               <div className="banner-image">
                 <img src={slide.image} alt={slide.title} />
+              
               </div>
             </section>
           </SwiperSlide>
