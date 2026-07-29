@@ -1,15 +1,29 @@
 import menProducts from "../data/menProducts";
 import ProductCard from "./ProductCard";
 
-function ProductGrid({ selectedBrand, sortBy, search }) {
-
+function ProductGrid({
+  selectedBrand,
+  selectedCategory,
+  sortBy,
+  search,
+  priceRange,
+}) {
+  // Brand Filter
   let filteredProducts =
     selectedBrand === "All"
-      ? menProducts
+      ? [...menProducts]
       : menProducts.filter(
           (item) => item.brand === selectedBrand
         );
 
+  // Category Filter
+  if (selectedCategory !== "All") {
+    filteredProducts = filteredProducts.filter(
+      (item) => item.category === selectedCategory
+    );
+  }
+
+  // Search Filter
   if (search.trim() !== "") {
     filteredProducts = filteredProducts.filter(
       (item) =>
@@ -22,6 +36,12 @@ function ProductGrid({ selectedBrand, sortBy, search }) {
     );
   }
 
+  // Price Filter
+  filteredProducts = filteredProducts.filter(
+    (item) => item.price <= priceRange
+  );
+
+  // Sorting
   if (sortBy === "low") {
     filteredProducts.sort((a, b) => a.price - b.price);
   }
@@ -32,12 +52,21 @@ function ProductGrid({ selectedBrand, sortBy, search }) {
 
   return (
     <section className="product-grid">
-      {filteredProducts.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-        />
-      ))}
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))
+      ) : (
+        <div className="no-products">
+          <h2>No products found</h2>
+          <p>
+            Try changing the search, brand, category, or price range.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

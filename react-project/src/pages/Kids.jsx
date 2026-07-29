@@ -7,33 +7,83 @@ import KidsProductGrid from "../components/KidsProductGrid";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/Kids.css";
+import ShopCategory from "../components/ShopCategory";
 
 function Kids() {
   const [selectedBrand, setSelectedBrand] = useState("All");
-  const [sortBy, setSortBy] = useState("Default");
+  const [sortBy, setSortBy] = useState("default");
   const [search, setSearch] = useState("");
+  const [priceRange, setPriceRange] = useState(10000);
 
   return (
     <>
-    <Navbar/>
-      <KidsHeroBanner />
+      <Navbar />
 
+      <KidsHeroBanner />
+      <ShopCategory/>
       <BrandSlider
         selectedBrand={selectedBrand}
         setSelectedBrand={setSelectedBrand}
       />
 
-      <SearchBar search={search} setSearch={setSearch} />
+      <SearchBar
+        search={search}
+        setSearch={setSearch}
+      />
 
       <FilterBar
+        selectedBrand={selectedBrand}
+        setSelectedBrand={setSelectedBrand}
         sortBy={sortBy}
         setSortBy={setSortBy}
       />
+
+      {/* Price Range Filter */}
+      <div className="price-filter">
+        <h3>Price Range</h3>
+
+        <input
+          type="range"
+          min="0"
+          max="10000"
+          step="500"
+          value={priceRange}
+          onChange={(e) => setPriceRange(Number(e.target.value))}
+          className="price-slider"
+        />
+
+        <p>
+          ₹0 - <strong>₹{priceRange}</strong>
+        </p>
+      </div>
+      <div className="filter-info">
+  <div className="filter-chip">
+    <span>Brand</span>
+    <strong>{selectedBrand}</strong>
+  </div>
+
+  <div className="filter-chip">
+    <span>Sort</span>
+    <strong>
+      {sortBy === "default"
+        ? "Featured"
+        : sortBy === "low"
+        ? "Price: Low → High"
+        : "Price: High → Low"}
+    </strong>
+  </div>
+
+  <div className="filter-chip">
+    <span>Max Price</span>
+    <strong>₹{priceRange}</strong>
+  </div>
+</div>
 
       <KidsProductGrid
         selectedBrand={selectedBrand}
         sortBy={sortBy}
         search={search}
+        priceRange={priceRange}
       />
 
       <Footer />

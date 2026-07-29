@@ -6,6 +6,7 @@ import SearchBar from "../components/SearchBar";
 import FilterBar from "../components/FilterBar";
 import ProductGrid from "../components/ProductGrid";
 import Footer from "../components/Footer";
+import ShopCategory from "../components/ShopCategory";
 
 import "../styles/men.css";
 
@@ -13,13 +14,19 @@ function Men() {
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [sortBy, setSortBy] = useState("default");
   const [search, setSearch] = useState("");
-
+  const [priceRange, setPriceRange] = useState(20000);
+   const [selectedCategory, setSelectedCategory] = useState("All");
+   console.log("Men:", selectedCategory);
   return (
     <>
       <Navbar />
 
       <div className="men-container">
         <HeroBanner />
+         <ShopCategory
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+        />
         <BrandSlider />
 
         <SearchBar
@@ -33,6 +40,28 @@ function Men() {
           sortBy={sortBy}
           setSortBy={setSortBy}
         />
+
+        
+
+        <div className="price-filter">
+          <h3>Price Range</h3>
+
+          <input
+            type="range"
+            min="0"
+            max="20000"
+            step="500"
+            value={priceRange}
+            onChange={(e) =>
+              setPriceRange(Number(e.target.value))
+            }
+            className="price-slider"
+          />
+
+          <p>
+            ₹0 - <strong>₹{priceRange}</strong>
+          </p>
+        </div>
 
         <div className="filter-info">
           <div className="filter-chip">
@@ -50,12 +79,19 @@ function Men() {
                 : "Price: High → Low"}
             </strong>
           </div>
+
+          <div className="filter-chip">
+            <span>Max Price</span>
+            <strong>₹{priceRange}</strong>
+          </div>
         </div>
 
         <ProductGrid
+          selectedCategory={selectedCategory}
           selectedBrand={selectedBrand}
           sortBy={sortBy}
           search={search}
+          priceRange={priceRange}
         />
       </div>
 

@@ -1,22 +1,38 @@
 import womenProducts from "../data/womenProducts";
 import ProductCard from "./ProductCard";
 
-function WomenProductGrid({ selectedBrand, sortBy, search }) {
+function WomenProductGrid({
+  selectedBrand,
+  sortBy,
+  search,
+  priceRange,
+}) {
   let filteredProducts =
     selectedBrand === "All"
-      ? womenProducts
+      ? [...womenProducts]
       : womenProducts.filter(
           (item) => item.brand === selectedBrand
         );
 
+  // Search Filter
   if (search.trim() !== "") {
     filteredProducts = filteredProducts.filter(
       (item) =>
-        item.title.toLowerCase().includes(search.toLowerCase()) ||
-        item.brand.toLowerCase().includes(search.toLowerCase())
+        item.title
+          .toLowerCase()
+          .includes(search.toLowerCase()) ||
+        item.brand
+          .toLowerCase()
+          .includes(search.toLowerCase())
     );
   }
 
+  // Price Filter
+  filteredProducts = filteredProducts.filter(
+    (item) => item.price <= priceRange
+  );
+
+  // Sorting
   if (sortBy === "low") {
     filteredProducts.sort((a, b) => a.price - b.price);
   }
@@ -27,9 +43,19 @@ function WomenProductGrid({ selectedBrand, sortBy, search }) {
 
   return (
     <section className="product-grid">
-      {filteredProducts.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))
+      ) : (
+        <div className="no-products">
+          <h2>No products found</h2>
+          <p>Try changing the search, brand, or price range.</p>
+        </div>
+      )}
     </section>
   );
 }

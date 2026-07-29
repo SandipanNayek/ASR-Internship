@@ -246,7 +246,28 @@
 }
 
 }
+.summary-details{
+    flex:1;
+}
 
+.summary-details h4{
+    font-size:17px;
+    margin-bottom:6px;
+    color:#111;
+}
+
+.summary-description{
+    font-size:14px;
+    color:#666;
+    margin-bottom:8px;
+    line-height:1.4;
+}
+
+.summary-qty{
+    font-size:14px;
+    color:#444;
+    font-weight:500;
+}
 @media(max-width:500px){
 
 .checkout-title{

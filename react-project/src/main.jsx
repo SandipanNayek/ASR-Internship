@@ -5,6 +5,7 @@ import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./context/AuthContext.jsx";
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
@@ -12,7 +13,9 @@ createRoot(document.getElementById("root")).render(
      <WishlistProvider>
         <CartProvider>
           <BrowserRouter>
+          <AuthProvider>
             <App />
+            </AuthProvider>
             <ToastContainer
               position="top-right"
               autoClose={2000}

@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 const flashDeals = [
   {
     id: 1,
-    name: "Nike Air Max",
+    title: "Nike Air Max",
+    brand: "Nike",
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
     oldPrice: 9999,
     price: 5999,
@@ -14,7 +15,8 @@ const flashDeals = [
   },
   {
     id: 2,
-    name: "Adidas Ultraboost",
+    title: "Adidas Ultraboost",
+    brand: "Adidas",
     image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600",
     oldPrice: 12999,
     price: 7999,
@@ -22,7 +24,8 @@ const flashDeals = [
   },
   {
     id: 3,
-    name: "Puma RS-X",
+    title: "Puma RS-X",
+    brand: "Puma",
     image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600",
     oldPrice: 8999,
     price: 4999,
@@ -30,7 +33,8 @@ const flashDeals = [
   },
   {
     id: 4,
-    name: "Jordan Retro",
+    title: "Jordan Retro",
+    brand: "Jordan",
     image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=600",
     oldPrice: 15999,
     price: 9999,

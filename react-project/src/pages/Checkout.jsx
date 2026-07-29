@@ -84,6 +84,8 @@ function Checkout() {
     navigate("/order-success");
   };
 
+  console.log(cart);
+
   return (
     <div className="checkout-page">
       <h1 className="checkout-title">Checkout</h1>
@@ -212,7 +214,7 @@ function Checkout() {
 
         </div>
 
-        {/* Order Summary */}
+        
 
         <div className="summary-section">
 
@@ -226,10 +228,17 @@ function Checkout() {
                 alt={item.title}
               />
 
-              <div>
-                <h4>{item.title}</h4>
-                <p>Qty : {item.quantity}</p>
-              </div>
+              <div className="summary-details">
+              <h4>{item.title}</h4>
+
+              <p className="summary-description">
+                Brand: {item.brand}
+              </p>
+
+              <p className="summary-qty">
+                Quantity: {item.quantity}
+              </p>
+            </div>
 
               <span>₹ {item.price * item.quantity}</span>
 

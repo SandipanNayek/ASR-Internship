@@ -1,15 +1,20 @@
 import kidsProducts from "../data/kidsProducts";
 import ProductCard from "./ProductCard";
 
-function KidsProductGrid({ selectedBrand, sortBy, search }) {
-
+function KidsProductGrid({
+  selectedBrand,
+  sortBy,
+  search,
+  priceRange,
+}) {
   let filteredProducts =
     selectedBrand === "All"
-      ? kidsProducts
+      ? [...kidsProducts]
       : kidsProducts.filter(
           (item) => item.brand === selectedBrand
         );
 
+  // Search Filter
   if (search.trim() !== "") {
     filteredProducts = filteredProducts.filter(
       (item) =>
@@ -22,6 +27,12 @@ function KidsProductGrid({ selectedBrand, sortBy, search }) {
     );
   }
 
+  // Price Filter
+  filteredProducts = filteredProducts.filter(
+    (item) => item.price <= priceRange
+  );
+
+  // Sorting
   if (sortBy === "low") {
     filteredProducts.sort((a, b) => a.price - b.price);
   }
@@ -32,16 +43,21 @@ function KidsProductGrid({ selectedBrand, sortBy, search }) {
 
   return (
     <section className="product-grid">
-      {filteredProducts.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-        />
-      ))}
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))
+      ) : (
+        <div className="no-products">
+          <h2>No products found</h2>
+          <p>Try changing the search, brand, or price range.</p>
+        </div>
+      )}
     </section>
   );
 }
 
-
 export default KidsProductGrid;
-

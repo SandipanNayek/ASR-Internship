@@ -149,6 +149,113 @@ nav{
     color: var(--primary-red);
     transform: translateY(-3px);
 }
+.auth-links{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.auth-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    transition:.3s;
+}
+
+.auth-links a:hover{
+    color:#ff4d30;
+}
+
+.profile-menu{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.profile-user{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    color:#222;
+}
+
+.logout-btn{
+    background:#111;
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+.profile-container{
+    position: relative;
+}
+
+.profile-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#f5f5f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.3s;
+    color:#222;      /* <-- Icon colour */
+    font-size:20px;
+}
+
+.profile-icon:hover{
+    background:#e8e8e8;
+}
+
+.profile-icon svg{
+    color:#222;      /* <-- React icon */
+}
+
+.profile-dropdown{
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 190px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.profile-dropdown a,
+.profile-dropdown button{
+    padding: 14px 18px;
+    border: none;
+    background: white;
+    text-align: left;
+    text-decoration: none;
+    color: #222;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover{
+    background: #f5f5f5;
+}
+
+.profile-name{
+    padding: 16px 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+.logout-btn:hover{
+    background:#ff4d30;
+}
 .nav-icons{
     display:flex;
     align-items:center;

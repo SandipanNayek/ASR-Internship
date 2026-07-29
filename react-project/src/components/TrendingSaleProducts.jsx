@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const products = [
   {
     id: 1,
-    name: "Nike Air Max",
+    title: "Nike Air Max",
     brand: "Nike",
     price: 5999,
     oldPrice: 8999,
@@ -15,7 +15,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Adidas Ultraboost",
+    title: "Adidas Ultraboost",
     brand: "Adidas",
     price: 7499,
     oldPrice: 10999,
@@ -24,7 +24,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Puma RS-X",
+    title: "Puma RS-X",
     brand: "Puma",
     price: 5499,
     oldPrice: 7999,
@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Jordan Retro",
+    title: "Jordan Retro",
     brand: "Jordan",
     price: 9999,
     oldPrice: 14999,
@@ -42,7 +42,7 @@ const products = [
   },
   {
     id: 5,
-    name: "New Balance 550",
+    title: "New Balance 550",
     brand: "New Balance",
     price: 6999,
     oldPrice: 9999,
@@ -51,7 +51,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Converse High",
+    title: "Converse High",
     brand: "Converse",
     price: 4499,
     oldPrice: 6999,
