@@ -681,14 +681,7 @@ BUTTONS
 
 @media (max-width: 991px) {
     nav { padding: 20px 30px; }
-    .nav-links {
-        display: flex;
-        gap: 15px;
-    }
-
-    .nav-links li a {
-        font-size: 13px;
-    }
+    .nav-links { display: none; }
     .hero { min-height: auto; padding-bottom: 80px; }
     .hero-content { height: auto; padding-top: 40px; }
     .hero-bg-text { display: none; }
