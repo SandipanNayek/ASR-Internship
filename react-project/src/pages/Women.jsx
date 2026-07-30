@@ -13,14 +13,18 @@ function Women() {
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [sortBy, setSortBy] = useState("default");
   const [search, setSearch] = useState("");
-  const [priceRange, setPriceRange] = useState(10000);
+  const [priceRange, setPriceRange] = useState(20000);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   return (
     <>
       <Navbar />
 
       <WomenHeroBanner />
-      <ShopCategory/>
+      <ShopCategory
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+        />
 
       <BrandSlider />
 
@@ -43,7 +47,7 @@ function Women() {
         <input
           type="range"
           min="0"
-          max="10000"
+          max="20000"
           step="500"
           value={priceRange}
           onChange={(e) =>
@@ -81,6 +85,7 @@ function Women() {
 
       <ProductGrid
         selectedBrand={selectedBrand}
+        selectedCategory={selectedCategory}
         sortBy={sortBy}
         search={search}
         priceRange={priceRange}

@@ -108,7 +108,6 @@ function TrendingSaleProducts() {
                 className="cart-btn"
                 onClick={() => {
                   addToCart(product);
-                  toast.success(`${product.name} added to cart 🛒`);
                 }}
               >
                 <FaCartPlus />

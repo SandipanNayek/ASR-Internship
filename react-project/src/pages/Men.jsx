@@ -7,7 +7,6 @@ import FilterBar from "../components/FilterBar";
 import ProductGrid from "../components/ProductGrid";
 import Footer from "../components/Footer";
 import ShopCategory from "../components/ShopCategory";
-
 import "../styles/men.css";
 
 function Men() {

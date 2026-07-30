@@ -44,13 +44,37 @@ function Footer() {
 
                      <div className="footer-col payment-col">
                         <h4>PAYMENT METHODS</h4>
-                        <div className="payment-icons">
-                          <img src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Emblem.png" alt="Mastercard" />
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIVAAo6RFly6s74KuJlJNCbtMN8y_6HVwtqEWD-MV5O5LtP9WBFz1sc5c&s=10" alt="Visa" />
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCWotc4wxPFRuwbi_kWDqWguX_MNf2WFocqDDNb9xoxXURR0ztq_HlqnP&s=10" alt="Paypal" />
 
+                        <div className="payment-icons">
+                            <img src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Emblem.png" alt="Mastercard" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIVAAo6RFly6s74KuJlJNCbtMN8y_6HVwtqEWD-MV5O5LtP9WBFz1sc5c&s=10" alt="Visa" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCWotc4wxPFRuwbi_kWDqWguX_MNf2WFocqDDNb9xoxXURR0ztq_HlqnP&s=10" alt="PayPal" />
                         </div>
-                     </div>
+
+                        <div className="footer-trust">
+                            <h5>Why Shop With Us?</h5>
+
+                            <div className="trust-item">
+                            <span>🚚</span>
+                            <p>Free Shipping</p>
+                            </div>
+
+                            <div className="trust-item">
+                            <span>↩️</span>
+                            <p>7-Day Easy Returns</p>
+                            </div>
+
+                            <div className="trust-item">
+                            <span>🔒</span>
+                            <p>100% Secure Payments</p>
+                            </div>
+
+                            <div className="trust-item">
+                            <span>🎧</span>
+                            <p>24/7 Customer Support</p>
+                            </div>
+                        </div>
+                        </div>
                 </div>
                     <div className="footer-bottom">
                        <p>Copyright © 2026 Rescope. All right reserved.</p>

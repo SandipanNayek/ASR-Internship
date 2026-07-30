@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 function KidsProductGrid({
   selectedBrand,
   sortBy,
+  selectedCategory,
   search,
   priceRange,
 }) {
@@ -13,6 +14,12 @@ function KidsProductGrid({
       : kidsProducts.filter(
           (item) => item.brand === selectedBrand
         );
+
+        if (selectedCategory !== "All") {
+    filteredProducts = filteredProducts.filter(
+      (item) => item.category === selectedCategory
+    );
+  }
 
   // Search Filter
   if (search.trim() !== "") {

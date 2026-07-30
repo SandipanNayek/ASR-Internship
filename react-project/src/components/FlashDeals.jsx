@@ -83,7 +83,7 @@ function FlashDeals() {
               <button
                 onClick={() => {
                   addToCart(shoe);
-                  toast.success(`${shoe.name} added to cart 🛒`);
+                  
                 }}
               >
                 <FaShoppingCart />

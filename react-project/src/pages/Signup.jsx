@@ -13,19 +13,22 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
 
-    signup(name, email, password);
+  const result = signup(name, email, password);
 
+  if (result.success) {
     alert("Account Created Successfully!");
-
     navigate("/");
-  };
+  } else {
+    alert(result.message);
+  }
+};
 
   return (
     <div className="signup-page">

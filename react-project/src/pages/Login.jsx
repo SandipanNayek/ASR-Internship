@@ -11,18 +11,17 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const success = login(email, password);
+  const result = login(email, password);
 
-    if (success) {
-      alert("Login Successful!");
-      navigate("/");
-    } else {
-      alert("Invalid Email or Password!");
-    }
-  };
-
+  if (result.success) {
+    alert("Login Successful!");
+    navigate("/");
+  } else {
+    alert(result.message);
+  }
+};
   return (
     <div className="login-page">
       <form className="login-card" onSubmit={handleSubmit}>
