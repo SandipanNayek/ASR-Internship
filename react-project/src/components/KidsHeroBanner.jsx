@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {  Pagination, Autoplay } from "swiper/modules";
 
 import kids1 from "../assets/KidsBanner-removebg-preview.png";
-import kids2 from "../assets/KidsBanner4-removebg-preview.png";
+import kids2 from "../assets/Kidsbanner4-removebg-preview.png";
 import kids3 from "../assets/KidsBanner3-removebg-preview.png";
 
 import "swiper/css";
