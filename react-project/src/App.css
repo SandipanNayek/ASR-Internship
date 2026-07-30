@@ -680,15 +680,42 @@ BUTTONS
 }
 
 @media (max-width: 991px) {
-    nav { padding: 20px 30px; }
-    .nav-links {
-        display: flex;
-        gap: 15px;
+    nav{
+        padding:12px 15px;
+        flex-wrap:wrap;
+        height:auto;
+        gap:15px;
     }
 
-    .nav-links li a {
-        font-size: 13px;
+    .logo{
+        width:100%;
+        align-items:center;
     }
+
+    .nav-links{
+        display:flex;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .nav-links li a{
+        font-size:13px;
+        letter-spacing:1px;
+    }
+
+    .nav-icons{
+        width:100%;
+        justify-content:center;
+        gap:20px;
+    }
+
+    .search-container input{
+        width:180px;
+        right:45px;
+    }
+
     .hero { min-height: auto; padding-bottom: 80px; }
     .hero-content { height: auto; padding-top: 40px; }
     .hero-bg-text { display: none; }
