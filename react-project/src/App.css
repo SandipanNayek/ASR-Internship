@@ -277,11 +277,7 @@ nav{
     position:relative;
 }
 
-.search-container input{
-    position:absolute;
-    right:50px;
-    width:250px;
-}
+
 
 .search-icon{
     cursor:pointer;
@@ -290,16 +286,120 @@ nav{
 
 
 
-.search-container input:focus{
-    border:2px solid #111;
+
+
+.search-container{
+    position:relative;
 }
 
-.search-container input{
-    width:250px;
-    opacity:1;
-    padding:10px 16px;
-    border:2px solid #ddd;
-    border-radius:30px;
+.search-box{
+    position:absolute;
+    top:55px;
+    right:0;
+    width:360px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    z-index:9999;
+    overflow:hidden;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    border-bottom:1px solid #eee;
+}
+
+.search-results{
+    max-height:350px;
+    overflow-y:auto;
+}
+
+.search-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:12px 15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-item:hover{
+    background:#f5f5f5;
+}
+
+.search-item img{
+    width:55px;
+    height:55px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.search-info h4{
+    font-size:15px;
+    color:#111;
+}
+
+.search-info p{
+    color:#666;
+    font-size:13px;
+}
+
+.search-info span{
+    color:#ff3b3b;
+    font-weight:bold;
+}
+@media (max-width:768px){
+
+.search-container{
+    position:static;
+}
+
+.search-box{
+    position:fixed;
+    top:75px;
+    left:50%;
+    transform:translateX(-50%);
+    width:95%;
+    max-width:400px;
+    right:auto;
+    z-index:9999;
+}
+
+.search-box input{
+    font-size:16px;
+    padding:14px;
+}
+
+.search-results{
+    max-height:300px;
+}
+
+.search-item{
+    gap:10px;
+    padding:10px;
+}
+
+.search-item img{
+    width:50px;
+    height:50px;
+}
+
+.search-info h4{
+    font-size:14px;
+}
+
+.search-info p{
+    font-size:12px;
+}
+
+.search-info span{
+    font-size:13px;
+}
+
 }
 
 
@@ -1867,4 +1967,178 @@ BUTTONS
     .trust-item {
         justify-content: center;
     }
+}
+.category-card{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+}
+
+.category-card:hover .arrow-icon{
+    transform:translateX(6px);
+}
+
+.arrow-icon{
+    transition:.3s;
+}
+/* ================= SEARCH ================= */
+
+.search-container{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.search-icon{
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-icon:hover{
+    color:#e63946;
+    transform:scale(1.1);
+}
+
+/* Search Box */
+
+.search-box{
+    position:absolute;
+    top:45px;
+    right:0;
+    width:360px;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    z-index:999;
+    animation:searchOpen .25s ease;
+}
+
+@keyframes searchOpen{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 18px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    border-bottom:1px solid #eee;
+}
+
+.search-box input::placeholder{
+    color:#888;
+}
+
+/* Search Result */
+
+.search-results{
+    max-height:380px;
+    overflow-y:auto;
+}
+
+.search-results::-webkit-scrollbar{
+    width:5px;
+}
+
+.search-results::-webkit-scrollbar-thumb{
+    background:#d0d0d0;
+    border-radius:10px;
+}
+
+/* Product */
+
+.search-item{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    padding:14px 16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-item:hover{
+    background:#f8f8f8;
+}
+
+.search-item img{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+    border:1px solid #eee;
+}
+
+.search-info{
+    flex:1;
+}
+
+.search-info h4{
+    font-size:15px;
+    margin-bottom:5px;
+    color:#111;
+}
+
+.search-info p{
+    font-size:13px;
+    color:#666;
+    margin-bottom:4px;
+}
+
+.search-info span{
+    color:#e63946;
+    font-weight:700;
+    font-size:15px;
+}
+
+.search-info small{
+    display:block;
+    margin-top:3px;
+    color:#999;
+}
+
+.no-search{
+    padding:25px;
+    text-align:center;
+    color:#888;
+    font-size:15px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.search-box{
+    width:92vw;
+    right:-70px;
+}
+
+.search-item img{
+    width:50px;
+    height:50px;
+}
+
+.search-info h4{
+    font-size:14px;
+}
+
+.search-info span{
+    font-size:14px;
+}
+
 }

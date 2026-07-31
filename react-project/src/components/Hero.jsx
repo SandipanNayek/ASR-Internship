@@ -2,8 +2,8 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 
 import mainShoe from "../assets/jordan_shoe-removebg-preview.png";
-import purpleShoe from "../assets/shoe-purple.png";
-import greenShoe from "../assets/shoe-green.png";
+import purpleShoe from "../assets/shoe-purple-removebg-preview.png";
+import greenShoe from "../assets/shoe-green-removebg-preview.png";
 
 function Hero() {
   const [shoe, setShoe] = useState(mainShoe);
