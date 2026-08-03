@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import ShopCategory from "../components/ShopCategory";
 import "../styles/men.css";
 
+
 function Men() {
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [sortBy, setSortBy] = useState("default");

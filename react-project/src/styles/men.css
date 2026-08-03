@@ -1157,7 +1157,39 @@ grid-template-columns:1fr;
 }
 
 }
+.product-card{
+    position:relative;
+}
 
+.wishlist-btn{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+    z-index:2;
+}
+
+.wishlist-btn:hover{
+    transform:scale(1.1);
+}
+
+.wishlist-btn svg{
+    font-size:18px;
+}
+
+.wishlist-btn .fa-heart{
+    color:#ff3b3b;
+}
 @media (max-width: 900px) {
   .hero-banner {
     flex-direction: column;

@@ -1,6 +1,6 @@
 const kidsProducts = [
   {
-    id: 1,
+    id:"kids-1",
     brand: "Nike",
     title: "Nike Kids Air Max",
     category: "Running",
@@ -8,7 +8,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
   },
   {
-    id: 2,
+    id: "kids-2",
     brand: "Adidas",
     title: "Adidas Kids Runner",
     category: "Running",
@@ -16,7 +16,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500",
   },
   {
-    id: 3,
+    id: "kids-3",
     brand: "Puma",
     title: "Puma Kids Smash",
     category: "Lifestyle",
@@ -24,7 +24,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500",
   },
   {
-    id: 4,
+    id: "kids-4",
     brand: "Reebok",
     title: "Reebok Junior Classic",
     category: "Lifestyle",
@@ -32,7 +32,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
   },
   {
-    id: 5,
+    id: "kids-5",
     brand: "New Balance",
     title: "New Balance Kids 574",
     category: "Running",
@@ -40,7 +40,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=500",
   },
   {
-    id: 6,
+    id: "kids-6",
     brand: "Converse",
     title: "Converse Kids Chuck",
     category: "Lifestyle",
@@ -48,7 +48,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=500",
   },
   {
-    id: 7,
+    id: "kids-7",
     brand: "Skechers",
     title: "Skechers Kids Sport",
     category: "Training",
@@ -56,7 +56,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500",
   },
   {
-    id: 8,
+    id: "kids-8",
     brand: "Fila",
     title: "Fila Kids Sneakers",
     category: "Football",
@@ -64,7 +64,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
   },
   {
-    id: 9,
+    id: "kids-9",
     brand: "Nike",
     title: "Nike Revolution Kids",
     category: "Running",
@@ -72,7 +72,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500",
   },
   {
-    id: 10,
+    id: "kids-10",
     brand: "Adidas",
     title: "Adidas Grand Court Kids",
     category: "Basketball",
@@ -80,7 +80,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
   },
   {
-    id: 11,
+    id: "kids-11",
     brand: "Puma",
     title: "Puma Fun Racer",
     category: "Training",
@@ -88,7 +88,7 @@ const kidsProducts = [
     image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500",
   },
   {
-    id: 12,
+    id: "kids-12",
     brand: "Reebok",
     title: "Reebok Kids Lite",
     category: "Training",

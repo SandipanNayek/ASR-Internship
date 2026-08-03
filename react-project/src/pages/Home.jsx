@@ -7,6 +7,7 @@ import PopularProducts from "../components/PopularProducts";
 import PromoSection from "../components/PromoSection"
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
+import AIShoeAssistant from "../components/AIShoeAssistant";
 import '../App.css'
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
   return (
     <>
     <Hero/>
+    <AIShoeAssistant/>
     <Brands/>
     <PopularProducts/>
     <Categories/>

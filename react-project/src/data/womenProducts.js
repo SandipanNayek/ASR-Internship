@@ -1,7 +1,7 @@
 const womenProducts = [
   // Nike
   {
-    id: 1,
+    id: "women-1",
     brand: "Nike",
     title: "Nike Air Force 1 Shadow",
     category: "Lifestyle",
@@ -10,7 +10,7 @@ const womenProducts = [
     image: "https://limitededt.in/cdn/shop/files/IF0498.102-1-2.jpg?v=1777380192&width=1200",
   },
   {
-    id: 2,
+    id: "women-2",
     brand: "Nike",
     title: "Nike Dunk Low Women",
     category: "basketball",
@@ -18,7 +18,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfY3Vomrqp1C7aI426RHspMdHQxAyy1lwQZxeQcz2FLTV7i2eB4Ic4f2wO&s=10",
   },
   {
-    id: 3,
+    id: "women-3",
     brand: "Nike",
     title: "Nike Air Max 270 Women",
     category: "Running",
@@ -26,7 +26,7 @@ const womenProducts = [
     image: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/0/e/0e972baAH6789-124_10.jpg?rnd=20200526195200&tr=w-512",
   },
   {
-    id: 4,
+    id: "women-4",
     brand: "Nike",
     title: "Nike Revolution 7 Women",
     category: "Running",
@@ -34,7 +34,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbEk9YVcKqOnHXxGnHx9Wi3OJXYpxqR9-N839tYpRARA&s=10",
   },
   {
-    id: 5,
+    id: "women-5",
     brand: "Nike",
     title: "Nike Pegasus 41 Women",
     category: "Running",
@@ -44,7 +44,7 @@ const womenProducts = [
 
   
   {
-    id: 6,
+    id: "women-6",
     brand: "Adidas",
     title: "Adidas Ultraboost Light",
     category: "Running",
@@ -52,7 +52,7 @@ const womenProducts = [
     image: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/3/13076c7YADIDA00096978_1.jpg?rnd=20200526195200&tr=w-512",
   },
   {
-    id: 7,
+    id: "women-7",
     brand: "Adidas",
     title: "Adidas Stan Smith Women",
     category: "Lifestyle",
@@ -60,7 +60,7 @@ const womenProducts = [
     image: "https://m.media-amazon.com/images/I/51uGVZixFQL._AC_UY300_.jpg",
   },
   {
-    id: 8,
+    id: "women-8",
     brand: "Adidas",
     title: "Adidas Superstar Women",
     category: "Football",
@@ -68,7 +68,7 @@ const womenProducts = [
     image: "https://assets.ajio.com/medias/sys_master/root/20240508/0LST/663b1e5a05ac7d77bb486ea8/-473Wx593H-469549423-white-MODEL.jpg",
   },
   {
-    id: 9,
+    id: "women-9",
     brand: "Adidas",
     title: "Adidas Forum Low Women",
     category: "basketball",
@@ -76,7 +76,7 @@ const womenProducts = [
     image: "https://assets.ajio.com/medias/sys_master/root/20250619/thVl/6854058b55340d4b4fc5290a/-1117Wx1400H-469716492-white-MODEL.jpg",
   },
   {
-    id: 10,
+    id: "women-10",
     brand: "Adidas",
     title: "Adidas NMD R1 Women",
     category: "Football",
@@ -86,7 +86,7 @@ const womenProducts = [
 
   // Puma
   {
-    id: 11,
+    id: "women-11",
     brand: "Puma",
     title: "Puma Cali Dream",
     category: "Lifestyle",
@@ -94,7 +94,7 @@ const womenProducts = [
     image: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/393802/01/sv01/fnd/IND/fmt/png/Cali-Dream-Women's-Sneakers",
   },
   {
-    id: 12,
+    id: "women-12",
     brand: "Puma",
     title: "Puma Carina Street",
     category: "Training",
@@ -102,7 +102,7 @@ const womenProducts = [
     image: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/389390/01/sv01/fnd/IND/fmt/png/Carina-Street-Women's-Sneakers",
   },
   {
-    id: 13,
+    id: "women-13",
     brand: "Puma",
     title: "Puma Karmen II",
     category: "Training",
@@ -110,7 +110,7 @@ const womenProducts = [
     image: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/392291/01/sv01/fnd/IND/fmt/png/Karmen-II-Women's-Sneakers",
   },
   {
-    id: 14,
+    id: "women-14",
     brand: "Puma",
     title: "Puma Softride Enzo",
     category: "Training",
@@ -118,7 +118,7 @@ const womenProducts = [
     image: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/377758/01/sv01/fnd/IND/fmt/png/Softride-Enzo-Evo-Running-Shoes",
   },
   {
-    id: 15,
+    id: "women-15",
     brand: "Puma",
     title: "Puma RS-X Women",
     category: "Football",
@@ -128,7 +128,7 @@ const womenProducts = [
 
   // Jordan
   {
-    id: 16,
+    id: "women-16",
     brand: "Jordan",
     title: "Air Jordan 1 Low Women",
     category: "basketball",
@@ -136,7 +136,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPLcvzWzQ9XP4aoExM6eFJWHOIKkVxwwUMsv8MtoCrEgbdwYorwV5s7TA&s=10",
   },
   {
-    id: 17,
+    id: "women-17",
     brand: "Jordan",
     title: "Air Jordan Mid Women",
     category: "basketball",
@@ -145,7 +145,7 @@ const womenProducts = [
 
   },
   {
-    id: 18,
+    id: "women-18",
     brand: "Jordan",
     title: "Jordan Stadium 90 Women",
     category: "Football",
@@ -153,7 +153,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjg9s8dKgsAnXGEiKTCLP5sSlP4hwnxAw9tM7KoWTaGw&s",
   },
   {
-    id: 19,
+    id: 'women-19',
     brand: "Jordan",
     title: "Jordan Max Aura Women",
     category: "Football",
@@ -161,7 +161,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYo31lhzqOJHzV61YS114GrZgd9Y9gRBNxaAf4RGHL6A&s=10",
   },
   {
-    id: 20,
+    id: "women-20",
     brand: "Jordan",
     title: "Jordan Legacy 312 Women",
     category: "basketball",
@@ -172,7 +172,7 @@ const womenProducts = [
 
   // Reebok
   {
-    id: 21,
+    id: "women-21",
     brand: "Reebok",
     title: "Reebok Classic Leather",
     category: "Lifestyle",
@@ -180,7 +180,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6dAKfSVwcIEJaT2eU_KfEXspWxciI2XZhWAOkar85GA&s=10",
   },
   {
-    id: 22,
+    id: "women-22",
     brand: "Reebok",
     title: "Reebok Nano X4",
     category: "Training",
@@ -188,7 +188,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPPAPpAAPS1a_dzrMG7Wr9P7Tzji4RSXKBiVlMvlNqsw&s=10",
   },
   {
-    id: 23,
+    id: "women-23",
     brand: "Reebok",
     title: "Reebok Zig Kinetica",
     category: "Training",
@@ -196,7 +196,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStSIp5RQmtMypBDRnHVaWgjuSrWZc1SeZBZCDa8OIyOg&s=10",
   },
   {
-    id: 24,
+    id: "women-24",
     brand: "Reebok",
     title: "Reebok Club C 85",
     category: "Lifestyle",
@@ -204,7 +204,7 @@ const womenProducts = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR418DUUKx11X0cCGGwL39K-TszlFcymUP_mcBjdczVmg&s=10",
   },
   {
-    id: 25,
+    id: "women-25",
     brand: "Reebok",
     title: "Reebok Floatride Energy",
     category: "Running",
