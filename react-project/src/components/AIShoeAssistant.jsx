@@ -234,7 +234,7 @@ function AIShoeAssistant() {
                     
                   }}
                 >
-                  
+                  Add Cart
                 </button>
 
                 <button
