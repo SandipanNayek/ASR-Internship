@@ -1,14 +1,18 @@
-
 import { useWishlist } from "../context/WishlistContext";
+import { useCart } from "../context/CartContext";
 
 function Wishlist() {
   const { wishlist, removeFromWishlist } = useWishlist();
+  const { addToCart } = useCart();
 
   if (wishlist.length === 0) {
     return (
       <div className="empty-cart">
         <h2>Your Wishlist is Empty</h2>
-        <p>Save your favourite shoes to buy them later.</p>
+
+        <p>
+          Save your favourite shoes to buy them later.
+        </p>
 
         <button
           className="shop-btn"
@@ -22,11 +26,16 @@ function Wishlist() {
 
   return (
     <div className="cart-page">
-      <h1 className="cart-title">My Wishlist</h1>
+      <h1 className="cart-title">
+        My Wishlist
+      </h1>
 
       <div className="cart-items">
         {wishlist.map((item) => (
-          <div className="cart-card" key={item.id}>
+          <div
+            className="cart-card"
+            key={item.id}
+          >
             <img
               src={item.image}
               alt={item.title}
@@ -51,6 +60,10 @@ function Wishlist() {
                   style={{
                     width: "220px",
                     marginTop: 0,
+                  }}
+                  onClick={() => {
+                    addToCart(item);
+                    removeFromWishlist(item.id);
                   }}
                 >
                   Add To Cart

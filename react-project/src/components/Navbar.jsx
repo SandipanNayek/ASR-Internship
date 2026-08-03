@@ -22,14 +22,27 @@ import womenProducts from "../data/womenProducts";
 import kidsProducts from "../data/kidsProducts";
 
 function Navbar() {
-  const { cart } = useCart();
-  const { wishlist } = useWishlist();
+  const {
+    cart,
+    addToCart,
+  } = useCart();
+
+  const {
+    wishlist,
+    addToWishlist,
+    removeFromWishlist,
+  } = useWishlist();
+
   const { user, logout } = useAuth();
 
   const navigate = useNavigate();
 
-  const [showSearch, setShowSearch] = useState(false);
-  const [search, setSearch] = useState("");
+  const [showSearch, setShowSearch] =
+    useState(false);
+
+  const [search, setSearch] =
+    useState("");
+
   const [showProfileMenu, setShowProfileMenu] =
     useState(false);
 
@@ -40,22 +53,24 @@ function Navbar() {
       ...p,
       page: "/men",
     })),
+
     ...womenProducts.map((p) => ({
       ...p,
       page: "/women",
     })),
+
     ...kidsProducts.map((p) => ({
       ...p,
       page: "/kids",
     })),
   ];
 
-  const filteredProducts = allProducts.filter(
-    (product) =>
+  const filteredProducts =
+    allProducts.filter((product) =>
       `${product.title} ${product.brand} ${product.category}`
         .toLowerCase()
         .includes(search.trim().toLowerCase())
-  );
+    );
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -99,140 +114,169 @@ function Navbar() {
   };
 
   return (
-  <nav>
-  {/* Logo */}
+    <nav>
 
-  <div className="logo">
-    <img src={logo} alt="Jumpman Logo" />
-    <h4>JUMPMAN</h4>
-  </div>
+      {/* Logo */}
 
-  {/* Navigation */}
+      <div className="logo">
+        <img
+          src={logo}
+          alt="Jumpman Logo"
+        />
+        <h4>JUMPMAN</h4>
+      </div>
 
-  <ul className="nav-links">
-    <li>
-      <NavLink to="/" end>
-        Home
-      </NavLink>
-    </li>
+      {/* Navigation */}
 
-    <li>
-      <NavLink to="/men">
-        Men
-      </NavLink>
-    </li>
+      <ul className="nav-links">
 
-    <li>
-      <NavLink to="/women">
-        Women
-      </NavLink>
-    </li>
+        <li>
+          <NavLink to="/" end>
+            Home
+          </NavLink>
+        </li>
 
-    <li>
-      <NavLink to="/kids">
-        Kids
-      </NavLink>
-    </li>
+        <li>
+          <NavLink to="/men">
+            Men
+          </NavLink>
+        </li>
 
-    <li>
-      <NavLink to="/sale">
-        Sale
-      </NavLink>
-    </li>
-  </ul>
+        <li>
+          <NavLink to="/women">
+            Women
+          </NavLink>
+        </li>
 
-  {/* Right Side */}
+        <li>
+          <NavLink to="/kids">
+            Kids
+          </NavLink>
+        </li>
 
-  <div className="nav-icons">
+        <li>
+          <NavLink to="/sale">
+            Sale
+          </NavLink>
+        </li>
 
-    {/* Search */}
+      </ul>
 
-    <div
-      className="search-container"
-      ref={searchRef}
-    >
+      {/* Right Side */}
 
-      <FaMagnifyingGlass
-        className="search-icon"
-        onClick={() =>
-          setShowSearch(!showSearch)
-        }
-      />
+      <div className="nav-icons">
 
-      {showSearch && (
-        <div className="search-box">
+        {/* Search */}
 
-          <input
-            type="text"
-            placeholder="Search Nike, Adidas, Puma..."
-            value={search}
-            onChange={(e) =>
-              setSearch(e.target.value)
+        <div
+          className="search-container"
+          ref={searchRef}
+        >
+
+          <FaMagnifyingGlass
+            className="search-icon"
+            onClick={() =>
+              setShowSearch(!showSearch)
             }
-            autoFocus
           />
 
-          {search.trim() !== "" && (
+          {showSearch && (
+            <div className="search-box">
 
-            <div className="search-results">
+              <input
+                type="text"
+                placeholder="Search Nike, Adidas, Puma..."
+                value={search}
+                onChange={(e) =>
+                  setSearch(e.target.value)
+                }
+                autoFocus
+              />
 
-              {filteredProducts.length > 0 ? (
+              {search.trim() !== "" && (
+                <div className="search-results">
+                  {filteredProducts.length > 0 ? (
 
-                filteredProducts
-                  .slice(0, 6)
-                  .map((product) => (
+  filteredProducts
+    .slice(0, 6)
+    .map((product) => {
 
-                    <div
-                      key={`${product.page}-${product.id}`}
-                      className="search-item"
-                      onClick={() =>
-                        handleSearchClick(product)
-                      }
-                    >
+      const isWishlisted = wishlist.some(
+        (item) => item.id === product.id
+      );
 
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                      />
+      return (
 
-                      <div className="search-info">
+        <div
+          key={`${product.page}-${product.id}`}
+          className="search-item"
+        >
 
-                        <h4>
-                          {product.title}
-                        </h4>
+          <img
+            src={product.image}
+            alt={product.title}
+            onClick={() =>
+              handleSearchClick(product)
+            }
+          />
 
-                        <p>
-                          {product.brand}
-                        </p>
+          <div className="search-info">
 
-                        <span>
-                          ₹{product.price}
-                        </span>
+            <h4>{product.title}</h4>
 
-                        <small>
-                          {product.category}
-                        </small>
+            <p>{product.brand}</p>
 
-                      </div>
+            <span>₹{product.price}</span>
 
-                    </div>
+            <small>{product.category}</small>
 
-                  ))
+            <div className="search-actions">
 
-              ) : (
+              <button
+                className="search-cart-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  addToCart(product);
+                }}
+              >
+                🛒 Add
+              </button>
 
-                <div className="no-search">
-                  No shoes found.
-                </div>
+              <button
+                className="search-wishlist-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
 
-              )}
+                  if (isWishlisted) {
+                    removeFromWishlist(product.id);
+                  } else {
+                    addToWishlist(product);
+                  }
+                }}
+              >
+                {isWishlisted ? "♥" : "♡"}
+              </button>
 
             </div>
 
-          )}
+          </div>
 
         </div>
-      )}
+
+      );
+    })
+
+) : (
+
+  <div className="no-search">
+    No shoes found.
+  </div>
+
+                  )}
+                </div>
+              )}
+            </div>
+          )}
 
     </div>
 
@@ -265,68 +309,83 @@ function Navbar() {
         </span>
       )}
     </NavLink>
+
     {/* Profile */}
 
-<div className="profile-container">
-  <div
-    className="profile-icon"
-    onClick={() =>
-      setShowProfileMenu(!showProfileMenu)
-    }
-  >
-    <FaUser />
+    <div className="profile-container">
+
+      <div
+        className="profile-icon"
+        onClick={() =>
+          setShowProfileMenu(!showProfileMenu)
+        }
+      >
+        <FaUser />
+      </div>
+
+      {showProfileMenu && (
+
+        <div className="profile-dropdown">
+
+          {!user ? (
+
+            <>
+              <Link
+                to="/login"
+                onClick={() =>
+                  setShowProfileMenu(false)
+                }
+              >
+                Login
+              </Link>
+
+              <Link
+                to="/signup"
+                onClick={() =>
+                  setShowProfileMenu(false)
+                }
+              >
+                Sign Up
+              </Link>
+            </>
+
+          ) : (
+
+            <>
+              <div className="profile-name">
+                {user.name}
+              </div>
+
+              <Link
+                to="/profile"
+                onClick={() =>
+                  setShowProfileMenu(false)
+                }
+              >
+                My Profile
+              </Link>
+
+              <button
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </>
+
+          )}
+
+        </div>
+
+      )}
+
+    </div>
+
   </div>
 
-  {showProfileMenu && (
-    <div className="profile-dropdown">
-      {!user ? (
-        <>
-          <Link
-            to="/login"
-            onClick={() =>
-              setShowProfileMenu(false)
-            }
-          >
-            Login
-          </Link>
-
-          <Link
-            to="/signup"
-            onClick={() =>
-              setShowProfileMenu(false)
-            }
-          >
-            Sign Up
-          </Link>
-        </>
-      ) : (
-        <>
-          <div className="profile-name">
-            {user.name}
-          </div>
-
-          <Link
-            to="/profile"
-            onClick={() =>
-              setShowProfileMenu(false)
-            }
-          >
-            My Profile
-          </Link>
-
-          <button onClick={handleLogout}>
-            Logout
-          </button>
-        </>
-      )}
-    </div>
-  )}
-</div>
-
-</div>
-
 </nav>
+
 );
+
 }
 
 export default Navbar;

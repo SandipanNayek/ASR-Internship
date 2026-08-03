@@ -2226,3 +2226,50 @@ nav{
 }
 
 }
+
+.search-actions{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+
+.search-cart-btn,
+.search-wishlist-btn{
+    border:none;
+    cursor:pointer;
+    border-radius:8px;
+    padding:8px 12px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.search-cart-btn{
+    background:#111;
+    color:#fff;
+    flex:1;
+}
+
+.search-cart-btn:hover{
+    background:#ff3b3b;
+}
+
+.search-wishlist-btn{
+    width:42px;
+    background:#f4f4f4;
+}
+
+.search-wishlist-btn:hover{
+    background:#ffe5e5;
+}
+
+@media (max-width:768px){
+
+.search-actions{
+    width:100%;
+}
+
+.search-cart-btn{
+    flex:1;
+}
+
+}
