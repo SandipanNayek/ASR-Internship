@@ -72,10 +72,14 @@ function AIShoeAssistant() {
     })),
   ];
 
-  const handleSearch = (voiceText = query) => {
-    const text = voiceText.toLowerCase().trim();
+  const handleSearch = (voiceText) => {
 
-    let filtered = [...allProducts];
+  const text =
+    typeof voiceText === "string"
+      ? voiceText.toLowerCase().trim()
+      : query.toLowerCase().trim();
+
+  let filtered = [...allProducts];
 
    
     ["nike", "adidas", "puma", "reebok", "fila", "converse", "skechers", "new balance"].forEach(
