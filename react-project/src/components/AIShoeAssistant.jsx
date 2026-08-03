@@ -231,12 +231,10 @@ function AIShoeAssistant() {
                 <button
                   onClick={() => {
                     addToCart(product);
-                    toast.success(
-                      "Added to Cart 🛒"
-                    );
+                    
                   }}
                 >
-                  Add Cart
+                  
                 </button>
 
                 <button
