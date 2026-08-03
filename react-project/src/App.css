@@ -357,55 +357,7 @@ nav{
     color:#ff3b3b;
     font-weight:bold;
 }
-@media (max-width:768px){
 
-.search-container{
-    position:static;
-}
-
-.search-box{
-    position:fixed;
-    top:75px;
-    left:50%;
-    transform:translateX(-50%);
-    width:95%;
-    max-width:400px;
-    right:auto;
-    z-index:9999;
-}
-
-.search-box input{
-    font-size:16px;
-    padding:14px;
-}
-
-.search-results{
-    max-height:300px;
-}
-
-.search-item{
-    gap:10px;
-    padding:10px;
-}
-
-.search-item img{
-    width:50px;
-    height:50px;
-}
-
-.search-info h4{
-    font-size:14px;
-}
-
-.search-info p{
-    font-size:12px;
-}
-
-.search-info span{
-    font-size:13px;
-}
-
-}
 
 
 .hero-bg-text{
@@ -871,156 +823,7 @@ BUTTONS
     .hero-dots { display: none; }
 }
 
-/* ===========================
-   MOBILE RESPONSIVE HOME
-=========================== */
 
-@media (max-width:768px){
-
-    nav{
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:auto;
-        padding:12px 15px;
-        flex-wrap:wrap;
-        background:#0b0b0b;
-        z-index:1000;
-    }
-
-    .logo{
-        width:100%;
-        align-items:center;
-    }
-
-    .nav-links{
-        display:flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        width:100%;
-        gap:12px;
-        margin-top:10px;
-    }
-
-    .nav-icons{
-        width:100%;
-        justify-content:center;
-        margin-top:10px;
-    }
-
-    /* Push hero below navbar */
-    .hero{
-        padding-top:170px;
-        min-height:auto;
-    }
-
-    .hero-content{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        text-align:center;
-        height:auto;
-        padding:20px;
-    }
-
-    .hero-bg-text{
-        display:none;
-    }
-
-    .jump-text{
-        position:static;
-        font-size:60px;
-        line-height:1;
-        letter-spacing:-2px;
-        margin-bottom:8px;
-    }
-
-    .hero-subtitle{
-        position:static;
-        letter-spacing:4px;
-        margin-bottom:20px;
-        font-size:13px;
-    }
-
-    .hero-image{
-        position:static;
-        transform:none;
-        width:100%;
-        margin:20px 0;
-    }
-
-    .hero-image img{
-        width:280px;
-        margin:auto;
-    }
-
-    .hero-info{
-        position:static;
-        width:100%;
-        padding:0;
-        margin-top:15px;
-    }
-
-    .year{
-        position:static;
-        display:block;
-        font-size:22px;
-        margin-bottom:5px;
-    }
-
-    .man-text{
-        position:static;
-        font-size:60px;
-        line-height:1;
-        margin-bottom:10px;
-    }
-
-    .hero-info h2{
-        font-size:32px;
-    }
-
-    .hero-info h3{
-        font-size:22px;
-    }
-
-    .hero-info p{
-        font-size:15px;
-        line-height:1.7;
-        padding:0 10px;
-    }
-
-    .hero-buttons{
-        position:static;
-        transform:none;
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-        margin-top:30px;
-        width:100%;
-    }
-
-    .btn{
-        width:220px;
-        margin:auto;
-    }
-
-    .shoe-colors{
-        position:static;
-        margin-top:35px;
-        text-align:center;
-    }
-
-    .color-list{
-        justify-content:center;
-    }
-
-    .hero-dots{
-        display:none;
-    }
-
-}
 
 @media (max-width:480px){
 
@@ -1478,19 +1281,7 @@ BUTTONS
     }
 }
 
-@media (max-width:768px) {
-    .bs-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .bs-tabs {
-        flex-wrap: wrap;
-    }
-
-    .bs-img-box {
-        height: 280px;
-    }
-}
 .promo-section {
     padding: 20px 0 80px;
     background: #fff;
@@ -1620,13 +1411,7 @@ BUTTONS
 
 }
 
-@media (max-width:768px) {
 
-    .promo-center h2 {
-        font-size: 24px;
-    }
-
-}
 
 .testimonial-section {
     padding: 90px 0;
@@ -1907,25 +1692,7 @@ BUTTONS
     }
 }
 
-@media (max-width:768px) {
-    .footer-section {
-        padding: 40px 20px 15px;
-    }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .brand-col p {
-        margin: auto;
-    }
-
-    .payment-icons {
-        justify-content: center;
-    }
-}
 /* ===== Why Shop With Us ===== */
 
 .footer-trust {
@@ -1967,11 +1734,40 @@ BUTTONS
 .trust-item:hover p {
     color: var(--primary-red);
 }
+@media (max-width:768px){
 
-@media (max-width:768px) {
-    .trust-item {
-        justify-content: center;
-    }
+nav{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:12px 15px;
+}
+
+.logo{
+    margin-bottom:10px;
+}
+
+.nav-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:0;
+    padding:0;
+}
+
+.nav-icons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:15px;
+    margin-bottom:10px;   /* keeps icons close to menu */
+}
+
+.hero{
+    margin-top:0;
+}
+
 }
 .category-card{
     cursor:pointer;
