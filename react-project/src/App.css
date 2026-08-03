@@ -1275,11 +1275,6 @@ BUTTONS
     transform: scale(1.1);
 }
 
-@media (max-width:991px) {
-    .bs-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
 
 
 .promo-section {
@@ -1378,38 +1373,7 @@ BUTTONS
 
 
 
-@media (max-width:991px) {
 
-    .promo-banner {
-        flex-direction: column;
-        height: auto;
-        padding: 40px;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    .promo-left {
-        display: none;
-    }
-
-    .promo-center {
-        flex: none;
-        padding: 0;
-    }
-
-    .promo-right {
-        position: relative;
-        right: 0;
-        top: 0;
-        width: 300px;
-        margin-top: 30px;
-    }
-
-    .promo-btn {
-        margin: 0 auto;
-    }
-
-}
 
 
 
@@ -1681,16 +1645,7 @@ BUTTONS
     color: #777;
 }
 
-@media (max-width:991px) {
-    .footer-grid {
-        grid-template-columns: repeat(2,1fr);
-        gap: 35px;
-    }
 
-    .brand-col {
-        grid-column: 1 / -1;
-    }
-}
 
 
 /* ===== Why Shop With Us ===== */
@@ -1749,11 +1704,17 @@ nav{
 }
 
 .nav-links{
+    width:100%;
     display:flex;
-    justify-content:center;
-    gap:20px;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:wrap;
+
+    flex:none;
     margin:0;
-    padding:0;
+    padding-left:12px;
+    gap:18px;
+    transform:none;
 }
 
 .nav-icons{
